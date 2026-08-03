@@ -31,23 +31,23 @@ const memoires = [
   {
     annee: "2026",
     titre: "Calcul stochastique appliqué à quelques problèmes de filtrage non-linéaire",
-    description: "Mémoire de Master 1 portant sur une introduction aux outils de calcul stochastique en vue d'aborder la théorie du filtrage non linéaire (équation de Zakai, filtre de Benes, ...) et leur application au suivi de trajectoires",
+    description: "Mémoire de Master 1 portant sur une introduction aux outils de calcul stochastique en vue d'aborder la théorie du filtrage non linéaire (équation de Zakai, filtre de Benes, ...) et leur application au suivi de trajectoires.",
     lien_pdf: "assets/memoires/memoire_filtrage_velcin.pdf",
     lien_slides: "assets/memoires/soutenance-slides.pdf"
   },
    {
     annee: "2025",
     titre: "Introduction à l'analyse fractionnaire",
-    description: "Mémoire de Licence 3, coécrit avec LOUKILI Douae, visant à introduire une généralisation des opérateurs différentiels usuels (dérivation, intégration) à des ordres non-entiers.",
+    description: "Mémoire de Licence 3, coécrit avec LOUKILI Douae, visant à introduire une généralisation des opérateurs différentiels usuels (dérivation, intégration) à des ordres non-entiers ainsi que diverses méthodes de résolution d'équations différentielles fractionnaires.",
     lien_pdf: "assets/memoires/memoire-filtrage-non-lineaire.pdf",
     lien_slides: "assets/memoires/soutenance-slides.pdf"
   },
    {
     annee: "2025",
-    titre: "Introduction à l'analyse fractionnaire",
-    description: "Mémoire de Licence 3, coécrit avec LOUKILI Douae, visant à introduire une généralisation des opérateurs différentiels usuels (dérivation, intégration) à des ordres non-entiers.",
+    titre: "Chaînes de Markov et Méthodes de Monte Carlo par Chaines de Markov : quelques éléments de théorie et simulation du Modèle d'Ising",
+    description: "Rapport issu de mon stage de recherche au sein de l'Institut Élie Cartan de Lorraine (IECL), ayant pour objectif d'introduire les chaînes de Markov et les méthodes MCMC, avec une application à la simulation du modèle d'Ising en 2D.",
     lien_pdf: "assets/memoires/memoire-filtrage-non-lineaire.pdf",
-    lien_slides: "assets/memoires/soutenance-slides.pdf"
+    lien_slides: null
   }
 ];
 
