@@ -53,11 +53,10 @@ const memoires = [
 
 const diplomes = [
   {
-    annee: "2026",
-    titre: "Calcul stochastique appliqué à quelques problèmes de filtrage non-linéaire",
-    description: "Mémoire de Master 1 portant sur une introduction aux outils de calcul stochastique en vue d'aborder la théorie du filtrage non linéaire (équation de Zakai, filtre de Benes, ...) et leur application au suivi de trajectoires.",
-    lien_pdf: "assets/memoires/memoire_filtrage_velcin.pdf",
-    lien_slides: "assets/memoires/slide_filtrage_velcin.pdf"
+    annee: "2025-2026",
+    titre: "Master 1 - Mathématiques & Applications",
+    universite: "Université de Lorraine",
+   description: "Probabilités, Calcul Stochastique, Statistiques, Optimisation, Analyse de Données et Modélisation
   },
    {
     annee: "2025",
