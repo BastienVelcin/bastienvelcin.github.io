@@ -32,7 +32,7 @@ const memoires = [
     annee: "2026",
     titre: "Calcul stochastique appliqué à quelques problèmes de filtrage non-linéaire",
     description: "Mémoire de Master 1 portant sur une introduction aux outils de calcul stochastique en vue d'aborder la théorie du filtrage non linéaire (équation de Zakai, filtre de Benes, ...) et leur application au suivi de trajectoires",
-    lien_pdf: "assets/memoires/memoire-filtrage-non-lineaire.pdf",
+    lien_pdf: "assets/memoires/memoire_filtrage_velcin.pdf",
     lien_slides: "assets/memoires/soutenance-slides.pdf"
   },
    {
