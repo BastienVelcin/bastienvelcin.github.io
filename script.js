@@ -30,8 +30,22 @@ const projets = [
 const memoires = [
   {
     annee: "2026",
-    titre: "Filtrage non linéaire : théorie et applications",
-    description: "Mémoire de M1 portant sur les méthodes de filtrage non linéaire (filtre de Kalman étendu, filtre particulaire) et leur application au suivi de trajectoires.",
+    titre: "Calcul stochastique appliqué à quelques problèmes de filtrage non-linéaire",
+    description: "Mémoire de Master 1 portant sur une introduction aux outils de calcul stochastique en vue d'aborder la théorie du filtrage non linéaire (équation de Zakai, filtre de Benes, ...) et leur application au suivi de trajectoires",
+    lien_pdf: "assets/memoires/memoire-filtrage-non-lineaire.pdf",
+    lien_slides: "assets/memoires/soutenance-slides.pdf"
+  },
+   {
+    annee: "2025",
+    titre: "Introduction à l'analyse fractionnaire",
+    description: "Mémoire de Licence 3, coécrit avec LOUKILI Douae, visant à introduire une généralisation des opérateurs différentiels usuels (dérivation, intégration) à des ordres non-entiers.",
+    lien_pdf: "assets/memoires/memoire-filtrage-non-lineaire.pdf",
+    lien_slides: "assets/memoires/soutenance-slides.pdf"
+  },
+   {
+    annee: "2025",
+    titre: "Introduction à l'analyse fractionnaire",
+    description: "Mémoire de Licence 3, coécrit avec LOUKILI Douae, visant à introduire une généralisation des opérateurs différentiels usuels (dérivation, intégration) à des ordres non-entiers.",
     lien_pdf: "assets/memoires/memoire-filtrage-non-lineaire.pdf",
     lien_slides: "assets/memoires/soutenance-slides.pdf"
   }
