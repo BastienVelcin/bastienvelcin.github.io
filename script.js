@@ -33,20 +33,20 @@ const memoires = [
     titre: "Calcul stochastique appliqué à quelques problèmes de filtrage non-linéaire",
     description: "Mémoire de Master 1 portant sur une introduction aux outils de calcul stochastique en vue d'aborder la théorie du filtrage non linéaire (équation de Zakai, filtre de Benes, ...) et leur application au suivi de trajectoires.",
     lien_pdf: "assets/memoires/memoire_filtrage_velcin.pdf",
-    lien_slides: "assets/memoires/soutenance-slides.pdf"
+    lien_slides: "assets/memoires/slide_filtrage_velcin.pdf"
   },
    {
     annee: "2025",
     titre: "Introduction à l'analyse fractionnaire",
     description: "Mémoire de Licence 3, coécrit avec LOUKILI Douae, visant à introduire une généralisation des opérateurs différentiels usuels (dérivation, intégration) à des ordres non-entiers ainsi que diverses méthodes de résolution d'équations différentielles fractionnaires.",
-    lien_pdf: "assets/memoires/memoire-filtrage-non-lineaire.pdf",
-    lien_slides: "assets/memoires/soutenance-slides.pdf"
+    lien_pdf: "assets/memoires/memoire_analyse_fractionnaire_loukili_velcin.pdf",
+    lien_slides: "assets/memoires/slide_analyse_fractionnaire_loukili_velcin.pdf"
   },
    {
     annee: "2025",
     titre: "Chaînes de Markov et Méthodes de Monte Carlo par Chaines de Markov : quelques éléments de théorie et simulation du Modèle d'Ising",
     description: "Rapport issu de mon stage de recherche au sein de l'Institut Élie Cartan de Lorraine (IECL), ayant pour objectif d'introduire les chaînes de Markov et les méthodes MCMC, avec une application à la simulation du modèle d'Ising en 2D.",
-    lien_pdf: "assets/memoires/memoire-filtrage-non-lineaire.pdf",
+    lien_pdf: "assets/memoires/markov_mcmc_velcin.pdf",
     lien_slides: null
   }
 ];
@@ -79,7 +79,7 @@ function renderMemoires() {
         <p>${m.description}</p>
         <div class="card-links">
           ${m.lien_pdf ? `<a href="${m.lien_pdf}" target="\_blank" rel="noopener" type="application/pdf" >Lire le mémoire (PDF) →</a>` : ""}
-          ${m.lien_slides ? `<a href="${m.lien_slides}" target="_blank" rel="noopener">Slides de soutenance →</a>` : ""}
+          ${m.lien_slides ? `<a href="${m.lien_slides}" target="\_blank" rel="noopener">Slides de soutenance →</a>` : ""}
         </div>
       </div>
     </div>
