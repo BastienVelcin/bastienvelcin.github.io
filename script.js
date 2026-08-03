@@ -1,0 +1,141 @@
+/* =====================================================================
+   Contenu éditable : ajoutez / modifiez vos projets et mémoires ici.
+   Pas besoin de toucher au HTML — les cartes sont générées automatiquement.
+===================================================================== */
+
+const projets = [
+  {
+    tag: "Python · Simulation",
+    titre: "Filtre de Kalman étendu — suivi radar",
+    description: "Implémentation d'un EKF pour le suivi d'une cible en mouvement à partir de mesures bruitées d'angle et de distance.",
+    lien_code: "https://github.com/votre-pseudo/projet-ekf-radar",
+    lien_demo: null
+  },
+  {
+    tag: "R · Statistiques",
+    titre: "Estimation par chaînes de Markov",
+    description: "Étude de la convergence d'une chaîne de Markov et estimation de sa mesure invariante sur données simulées.",
+    lien_code: "https://github.com/votre-pseudo/projet-markov",
+    lien_demo: null
+  },
+  {
+    tag: "LaTeX · Cours",
+    titre: "Notes de cours — calcul stochastique",
+    description: "Synthèse rédigée du cours de calcul stochastique : intégrale d'Itô, formule d'Itô, équations différentielles stochastiques.",
+    lien_code: "https://github.com/votre-pseudo/notes-calcul-stochastique",
+    lien_demo: null
+  }
+];
+
+const memoires = [
+  {
+    annee: "2026",
+    titre: "Filtrage non linéaire : théorie et applications",
+    description: "Mémoire de M1 portant sur les méthodes de filtrage non linéaire (filtre de Kalman étendu, filtre particulaire) et leur application au suivi de trajectoires.",
+    lien_pdf: "assets/memoires/memoire-filtrage-non-lineaire.pdf",
+    lien_slides: "assets/memoires/soutenance-slides.pdf"
+  }
+];
+
+/* ===================================================================
+   Rendu des cartes
+=================================================================== */
+function renderProjets() {
+  const grid = document.getElementById("projets-grid");
+  grid.innerHTML = projets.map(p => `
+    <article class="card reveal">
+      <p class="tag">${p.tag}</p>
+      <h3>${p.titre}</h3>
+      <p>${p.description}</p>
+      <div class="card-links">
+        ${p.lien_code ? `<a href="${p.lien_code}" target="_blank" rel="noopener">Code →</a>` : ""}
+        ${p.lien_demo ? `<a href="${p.lien_demo}" target="_blank" rel="noopener">Démo →</a>` : ""}
+      </div>
+    </article>
+  `).join("");
+}
+
+function renderMemoires() {
+  const list = document.getElementById("memoires-list");
+  list.innerHTML = memoires.map(m => `
+    <div class="memoire-item reveal">
+      <p class="year">${m.annee}</p>
+      <div>
+        <h3>${m.titre}</h3>
+        <p>${m.description}</p>
+        <div class="card-links">
+          ${m.lien_pdf ? `<a href="${m.lien_pdf}" target="_blank" rel="noopener">Lire le mémoire (PDF) →</a>` : ""}
+          ${m.lien_slides ? `<a href="${m.lien_slides}" target="_blank" rel="noopener">Slides de soutenance →</a>` : ""}
+        </div>
+      </div>
+    </div>
+  `).join("");
+}
+
+/* ===================================================================
+   Navigation active au scroll + reveal on scroll
+=================================================================== */
+function setupScrollObservers() {
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll("[data-nav]");
+
+  const setActive = (id) => {
+    navLinks.forEach(a => {
+      a.classList.toggle("active", a.getAttribute("href") === `#${id}`);
+    });
+  };
+
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) setActive(entry.target.id);
+    });
+  }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+
+  sections.forEach(s => sectionObserver.observe(s));
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+}
+
+/* ===================================================================
+   Menu mobile
+=================================================================== */
+function setupMobileMenu() {
+  const btn = document.getElementById("menu-toggle");
+  const menu = document.getElementById("topbar-menu");
+  if (!btn || !menu) return;
+
+  btn.addEventListener("click", () => {
+    const open = menu.classList.toggle("open");
+    btn.setAttribute("aria-expanded", String(open));
+    btn.textContent = open ? "Fermer" : "Menu";
+  });
+
+  menu.querySelectorAll("a").forEach(a => {
+    a.addEventListener("click", () => {
+      menu.classList.remove("open");
+      btn.setAttribute("aria-expanded", "false");
+      btn.textContent = "Menu";
+    });
+  });
+}
+
+/* ===================================================================
+   Init
+=================================================================== */
+document.addEventListener("DOMContentLoaded", () => {
+  renderProjets();
+  renderMemoires();
+  setupScrollObservers();
+  setupMobileMenu();
+  const y = document.getElementById("year");
+  if (y) y.textContent = new Date().getFullYear();
+});
