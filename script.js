@@ -185,6 +185,7 @@ function setupMobileMenu() {
 document.addEventListener("DOMContentLoaded", () => {
   renderProjets();
   renderMemoires();
+   renderDiplomes();
   setupScrollObservers();
   setupMobileMenu();
   const y = document.getElementById("year");
