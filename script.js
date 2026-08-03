@@ -5,16 +5,16 @@
 
 const projets = [
   {
-    tag: "Python · Simulation",
-    titre: "Filtre de Kalman étendu — suivi radar",
-    description: "Implémentation d'un EKF pour le suivi d'une cible en mouvement à partir de mesures bruitées d'angle et de distance.",
-    lien_code: "https://github.com/votre-pseudo/projet-ekf-radar",
+    tag: "Python · Modélisation",
+    titre: "Bibliothèque PyStochastic",
+    description: "Création d'une bibliothèque python destinée au calcul stochastique et à la modélisation stochastique. Le projet est en cours de développement.",
+    lien_code: "https://github.com/BastienVelcin/PyStochastic",
     lien_demo: null
   },
   {
-    tag: "R · Statistiques",
-    titre: "Estimation par chaînes de Markov",
-    description: "Étude de la convergence d'une chaîne de Markov et estimation de sa mesure invariante sur données simulées.",
+    tag: "MATLAB · Modélisation",
+    titre: "Méthodes  des Élements Finis en dimension 2",
+    description: "Application de la méthode des éléments finis à un domaine rectange perforé par une ellipse. Projet co-réalisé avec MULLER Célia.",
     lien_code: "https://github.com/votre-pseudo/projet-markov",
     lien_demo: null
   },
@@ -38,7 +38,7 @@ const memoires = [
    {
     annee: "2025",
     titre: "Introduction à l'analyse fractionnaire",
-    description: "Mémoire de Licence 3, coécrit avec LOUKILI Douae, visant à introduire une généralisation des opérateurs différentiels usuels (dérivation, intégration) à des ordres non-entiers ainsi que diverses méthodes de résolution d'équations différentielles fractionnaires.",
+    description: "Mémoire de Licence 3, coécrit avec <hrefLOUKILI Douae, visant à introduire une généralisation des opérateurs différentiels usuels (dérivation, intégration) à des ordres non-entiers ainsi que diverses méthodes de résolution d'équations différentielles fractionnaires.",
     lien_pdf: "assets/memoires/memoire-filtrage-non-lineaire.pdf",
     lien_slides: "assets/memoires/soutenance-slides.pdf"
   },
