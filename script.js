@@ -58,20 +58,6 @@ const diplomes = [
     universite: "Université de Lorraine",
    description: "Probabilités, Calcul Stochastique, Statistiques, Optimisation, Analyse de Données et Modélisation
   },
-   {
-    annee: "2025",
-    titre: "Introduction à l'analyse fractionnaire",
-    description: "Mémoire de Licence 3, coécrit avec LOUKILI Douae, visant à introduire une généralisation des opérateurs différentiels usuels (dérivation, intégration) à des ordres non-entiers ainsi que diverses méthodes de résolution d'équations différentielles fractionnaires.",
-    lien_pdf: "assets/memoires/memoire_analyse_fractionnaire_loukili_velcin.pdf",
-    lien_slides: "assets/memoires/slide_analyse_fractionnaire_loukili_velcin.pdf"
-  },
-   {
-    annee: "2025",
-    titre: "Chaînes de Markov et Méthodes de Monte Carlo par Chaines de Markov : quelques éléments de théorie et simulation du Modèle d'Ising",
-    description: "Rapport issu de mon stage de recherche au sein de l'Institut Élie Cartan de Lorraine (IECL), ayant pour objectif d'introduire les chaînes de Markov et les méthodes MCMC, avec une application à la simulation du modèle d'Ising en 2D.",
-    lien_pdf: "assets/memoires/markov_mcmc_velcin.pdf",
-    lien_slides: null
-  }
 ];
 
 /* ===================================================================
