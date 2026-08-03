@@ -51,14 +51,6 @@ const memoires = [
   }
 ];
 
-const diplomes = [
-  {
-    annee: "2025-2026",
-    titre: "Master 1 - Mathématiques & Applications",
-    universite: "Université de Lorraine",
-   description: "Probabilités, Calcul Stochastique, Statistiques, Optimisation, Analyse de Données et Modélisation
-  },
-];
 
 /* ===================================================================
    Rendu des cartes
@@ -95,19 +87,6 @@ function renderMemoires() {
   `).join("");
 }
 
-function renderDiplomes() {
-  const list = document.getElementById("diplomes-list");
-  list.innerHTML = diplomes.map(m => `
-    <div class="memoire-item reveal">
-      <p class="year">${m.annee}</p>
-      <div>
-        <h4>${m.diplome}</h4>
-        <h5>${m.universite}</h5>
-        <p>${m.description}</p>
-      </div>
-    </div>
-  `).join("");
-}
 /* ===================================================================
    Navigation active au scroll + reveal on scroll
 =================================================================== */
@@ -170,7 +149,6 @@ function setupMobileMenu() {
 document.addEventListener("DOMContentLoaded", () => {
   renderProjets();
   renderMemoires();
-   renderDiplomes();
   setupScrollObservers();
   setupMobileMenu();
   const y = document.getElementById("year");
