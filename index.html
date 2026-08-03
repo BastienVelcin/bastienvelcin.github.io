@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bastien Velcin — Portfolio universitaire</title>
+<title>Prénom Nom — Portfolio universitaire</title>
 <meta name="description" content="Portfolio universitaire — projets, mémoires et CV en mathématiques (probabilités, calcul stochastique, filtrage non linéaire).">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,15 +14,20 @@
 
 <!-- Mobile top bar (shown under 900px, replaces the fixed right nav) -->
 <div class="topbar">
-  <span class="brand">Bastien Velcin</span>
-  <button id="menu-toggle" aria-expanded="false" aria-controls="topbar-menu">Menu</button>
+  <span class="brand">Prénom Nom</span>
+  <div class="topbar-right">
+    <button class="lang-switch" id="lang-toggle-mobile" aria-label="Changer de langue / Switch language">
+      <span data-lang-btn="fr">FR</span><span class="lang-sep">·</span><span data-lang-btn="en">EN</span>
+    </button>
+    <button id="menu-toggle" aria-expanded="false" aria-controls="topbar-menu">Menu</button>
+  </div>
 </div>
 <nav id="topbar-menu" class="topbar-menu" aria-label="Navigation principale (mobile)">
-  <a href="#accueil" data-nav>Accueil</a>
-  <a href="#projets" data-nav>Projets</a>
-  <a href="#memoires" data-nav>Mémoires</a>
-  <a href="#cv" data-nav>CV</a>
-  <a href="#contact" data-nav>Contact</a>
+  <a href="#accueil" data-nav data-i18n="nav.accueil">Accueil</a>
+  <a href="#projets" data-nav data-i18n="nav.projets">Projets</a>
+  <a href="#memoires" data-nav data-i18n="nav.memoires">Mémoires</a>
+  <a href="#cv" data-nav data-i18n="nav.cv">CV</a>
+  <a href="#contact" data-nav data-i18n="nav.contact">Contact</a>
 </nav>
 
 <div class="layout">
@@ -31,17 +36,17 @@
 
     <!-- ============ ACCUEIL ============ -->
     <section id="accueil">
-      <p class="eyebrow">Portfolio universitaire — M2 Mathématiques</p>
-      <h1 class="hero-title">Bastien <em>Velcin</em></h1>
-      <p class="hero-tagline">
-        Étudiant en Master 2 de Mathématiques - Spécialisé en probabilités, calcul stochastique
-        et probabilités appliquées à la finance et à l'assurance.
+      <p class="eyebrow" data-i18n="hero.eyebrow">Portfolio universitaire — M1 Mathématiques</p>
+      <h1 class="hero-title">Prénom <em>Nom</em></h1>
+      <p class="hero-tagline" data-i18n="hero.tagline">
+        Étudiant en Master 1 de Mathématiques, spécialisé en probabilités et analyse stochastique.
+        Mémoire de recherche sur le filtrage non linéaire.
       </p>
 
       <div class="hero-links">
-        <a href="#projets">Voir mes projets →</a>
-        <a href="#memoires">Lire mes mémoires de recherche →</a>
-        <a href="#cv">Consulter mon CV →</a>
+        <a href="#projets" data-i18n="hero.link.projets">Voir mes projets →</a>
+        <a href="#memoires" data-i18n="hero.link.memoires">Lire mes mémoires →</a>
+        <a href="#cv" data-i18n="hero.link.cv">Consulter mon CV →</a>
       </div>
 
       <div class="trajectory-wrap">
@@ -50,49 +55,49 @@
           <path id="path-est" class="path-anim" d="M0,88 C40,78 60,92 100,82 S160,60 200,72 240,88 280,66 320,48 360,58 400,78 440,68 480,58 520,68 560,58" />
         </svg>
         <p class="trajectory-caption">
-          <span><i class="dot steel"></i> trajectoire réelle</span>
-          <span><i class="dot raspberry"></i> estimation filtrée</span>
+          <span><i class="dot steel"></i> <span data-i18n="traj.true">trajectoire réelle</span></span>
+          <span><i class="dot raspberry"></i> <span data-i18n="traj.est">estimation filtrée</span></span>
         </p>
       </div>
     </section>
 
     <!-- ============ PROJETS ============ -->
     <section id="projets">
-      <p class="eyebrow">02 — Travaux</p>
-      <h2>Projets</h2>
+      <p class="eyebrow" data-i18n="section.projets.eyebrow">02 — Travaux</p>
+      <h2 data-i18n="section.projets.title">Projets</h2>
       <div class="grid-projets" id="projets-grid"><!-- injecté par script.js --></div>
     </section>
 
     <!-- ============ MEMOIRES ============ -->
     <section id="memoires">
-      <p class="eyebrow">03 — Recherche</p>
-      <h2>Mémoires</h2>
+      <p class="eyebrow" data-i18n="section.memoires.eyebrow">03 — Recherche</p>
+      <h2 data-i18n="section.memoires.title">Mémoires</h2>
       <div id="memoires-list"><!-- injecté par script.js --></div>
     </section>
 
     <!-- ============ CV ============ -->
     <section id="cv">
-      <p class="eyebrow">04 — Parcours</p>
-      <h2>Curriculum Vitæ</h2>
+      <p class="eyebrow" data-i18n="section.cv.eyebrow">04 — Parcours</p>
+      <h2 data-i18n="section.cv.title">Curriculum Vitæ</h2>
       <div class="cv-box">
-        <p class="cv-summary">
+        <p class="cv-summary" data-i18n="cv.summary">
           Version à jour de mon CV, avec mon parcours académique, mes compétences techniques
           et mes expériences en lien avec les mathématiques appliquées.
         </p>
-        <a class="btn" href="assets/cv/CV.pdf" download>↓ Télécharger le CV (PDF)</a>
+        <a class="btn" href="assets/cv/CV.pdf" download data-i18n="cv.button">↓ Télécharger le CV (PDF)</a>
 
         <ul class="cv-highlights">
-          <li><strong>M1</strong>Mathématiques — probabilités &amp; stochastique</li>
-          <li><strong>Mémoire</strong>Filtrage non linéaire</li>
-          <li><strong>Outils</strong>LaTeX, Python, R</li>
+          <li><strong data-i18n="cv.h1.label">M1</strong><span data-i18n="cv.h1.value">Mathématiques — probabilités &amp; stochastique</span></li>
+          <li><strong data-i18n="cv.h2.label">Mémoire</strong><span data-i18n="cv.h2.value">Filtrage non linéaire</span></li>
+          <li><strong data-i18n="cv.h3.label">Outils</strong><span data-i18n="cv.h3.value">LaTeX, Python, R</span></li>
         </ul>
       </div>
     </section>
 
     <!-- ============ CONTACT ============ -->
     <section id="contact">
-      <p class="eyebrow">05 — Contact</p>
-      <h2>Me contacter</h2>
+      <p class="eyebrow" data-i18n="section.contact.eyebrow">05 — Contact</p>
+      <h2 data-i18n="section.contact.title">Me contacter</h2>
       <div class="contact-grid">
         <a href="mailto:prenom.nom@etu.univ.fr">prenom.nom@etu.univ.fr</a>
         <a href="https://github.com/votre-pseudo" target="_blank" rel="noopener">GitHub</a>
@@ -102,20 +107,23 @@
 
   </main>
 
-  <footer class="site-foot">© <span id="year"></span> — Site construit avec HTML/CSS/JS, hébergé sur GitHub Pages.</footer>
+  <footer class="site-foot">© <span id="year"></span> — <span data-i18n="footer.text">Site construit avec HTML/CSS/JS, hébergé sur GitHub Pages.</span></footer>
 
   <!-- Fixed right sidebar nav (desktop) -->
   <aside class="sidebar">
     <p class="brand">Prénom Nom</p>
     <nav aria-label="Navigation principale">
       <ul>
-        <li><a href="#accueil" data-nav><span class="idx">01</span> Accueil</a></li>
-        <li><a href="#projets" data-nav><span class="idx">02</span> Projets</a></li>
-        <li><a href="#memoires" data-nav><span class="idx">03</span> Mémoires</a></li>
-        <li><a href="#cv" data-nav><span class="idx">04</span> CV</a></li>
-        <li><a href="#contact" data-nav><span class="idx">05</span> Contact</a></li>
+        <li><a href="#accueil" data-nav><span class="idx">01</span><span data-i18n="nav.accueil">Accueil</span></a></li>
+        <li><a href="#projets" data-nav><span class="idx">02</span><span data-i18n="nav.projets">Projets</span></a></li>
+        <li><a href="#memoires" data-nav><span class="idx">03</span><span data-i18n="nav.memoires">Mémoires</span></a></li>
+        <li><a href="#cv" data-nav><span class="idx">04</span><span data-i18n="nav.cv">CV</span></a></li>
+        <li><a href="#contact" data-nav><span class="idx">05</span><span data-i18n="nav.contact">Contact</span></a></li>
       </ul>
     </nav>
+    <button class="lang-switch" id="lang-toggle-desktop" aria-label="Changer de langue / Switch language">
+      <span data-lang-btn="fr">FR</span><span class="lang-sep">·</span><span data-lang-btn="en">EN</span>
+    </button>
     <div class="sidebar-foot">
       <a href="https://github.com/votre-pseudo" target="_blank" rel="noopener">GitHub</a>
       <a href="mailto:prenom.nom@etu.univ.fr">Email</a>
