@@ -78,7 +78,7 @@ function renderMemoires() {
         <h3>${m.titre}</h3>
         <p>${m.description}</p>
         <div class="card-links">
-          ${m.lien_pdf ? `<a href="${m.lien_pdf}" target="_blank" rel="noopener" type="application/pdf" >Lire le mémoire (PDF) →</a>` : ""}
+          ${m.lien_pdf ? `<a href="${m.lien_pdf}" target="\_blank" rel="noopener" type="application/pdf" >Lire le mémoire (PDF) →</a>` : ""}
           ${m.lien_slides ? `<a href="${m.lien_slides}" target="_blank" rel="noopener">Slides de soutenance →</a>` : ""}
         </div>
       </div>
