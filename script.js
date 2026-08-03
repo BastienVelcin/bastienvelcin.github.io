@@ -38,7 +38,7 @@ const memoires = [
    {
     annee: "2025",
     titre: "Introduction à l'analyse fractionnaire",
-    description: "Mémoire de Licence 3, coécrit avec <hrefLOUKILI Douae, visant à introduire une généralisation des opérateurs différentiels usuels (dérivation, intégration) à des ordres non-entiers ainsi que diverses méthodes de résolution d'équations différentielles fractionnaires.",
+    description: "Mémoire de Licence 3, coécrit avec LOUKILI Douae, visant à introduire une généralisation des opérateurs différentiels usuels (dérivation, intégration) à des ordres non-entiers ainsi que diverses méthodes de résolution d'équations différentielles fractionnaires.",
     lien_pdf: "assets/memoires/memoire-filtrage-non-lineaire.pdf",
     lien_slides: "assets/memoires/soutenance-slides.pdf"
   },
