@@ -77,14 +77,14 @@ const experiences = [
   {
     annee: "2024-2026",
     titre: "Tuteur en Mathématiques",
-    universite: "Université de Lorraine - Site de Metz",
+    lieu: "Université de Lorraine - Site de Metz",
     description: "Organisation et conduite de séances pédagogiques de tutorat pour les L1 Mathématiques et L1 Mathématiques pour le Professorat des Écoles (PPPE) en logique, analyse, algèbre, et algèbre linéaire",
   },
    
    {
     annee: "2024-2025",
     titre: "Stage de recherche en Mathématiques",
-    universite: "Institut Élie Cartan de Lorraine (IECL)",
+    lieu: "Institut Élie Cartan de Lorraine (IECL)",
     description: "Analyse de publications scientifiques traitant des chaînes de Markov et des Méthodes de Monte Carlo par Chaînes de Markov (MCMC). Rédaction d’un rapport de recherche structuré, synthétisant les résultats obtenus et la méthodologie.",
   },
 ];
