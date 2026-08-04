@@ -115,7 +115,7 @@ const softskills = [
    },
    {
       titre: { fr:"Langues", en:"Languages"},
-      description : {fr: "Français (Natif), Anglais (B2)", en: "French (Native), Englisg (B2)"}
+      description : {fr: "Français (Natif), Anglais (B2)", en: "French (Native), English (B2)"}
    },
 ];
 /* =====================================================================
@@ -243,9 +243,7 @@ function renderExperiences() {
 function renderSoftskills() {
   const list = document.getElementById("softskills-list");
   list.innerHTML = softskills.map(s => `
-     <ul class="cv-highlights">
-          <li><strong data-i18n="cv.h1.label">${s.titre[currentLang]}</strong><span data-i18n="cv.h1.value">${s.description[currentLang]}</span></li>
-      </ul>
+      <li><strong data-i18n="cv.h1.label">${s.titre[currentLang]}</strong><span data-i18n="cv.h1.value">${s.description[currentLang]}</span></li>
   `).join("");
 }
 
