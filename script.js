@@ -125,6 +125,10 @@ const softskills = [
       titre: { fr:"Langues", en:"Languages"},
       description : {fr: "<ul> <li id='ss'>Français (Natif)</li> <li id='ss'>Anglais (B2)</li></ul>", en: "<ul> <li id='ss'>French (Native)</li> <li id='ss'>English (B2)</li></ul>"},
    },
+   {
+      titre: { fr:"Compétences mathématiques", en:"Mathematical skills"},
+      description : {fr: "<ul> <li id='ss'>Probabilités</li> <li id='ss'>Calcul stochastique</li> <li id='ss'>Statistiques</li>  <li id='ss'>Analyse numérique</li>  <li id='ss'>Optimisation</li> <\ul>", en: "<ul> <li id='ss'>Probability Theory</li> <li id='ss'>Stochastic Calculus</li> <li id='ss'>Statistics</li>  <li id='ss'>Numerical Analysis</li>  <li id='ss'>Optimization</li> <\ul>"},
+   },
 
 
 ];
