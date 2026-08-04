@@ -33,7 +33,7 @@ const memoires = [
     titre: { fr: "Calcul stochastique appliqué à quelques problèmes de filtrage non-linéaire", en: "Stochastic calculus applied to some non-linear filtering problems" },
     description: {
       fr: "Mémoire de Master 1 portant sur une introduction aux outils de calcul stochastique en vue d'aborder la théorie du filtrage non linéaire (équation de Zakai, filtre de Benes, ...) et leur application au suivi de trajectoires.",
-      en: "First-year Master’s thesis providing an introduction to stochastic computation tools to explore the theory of non-linear filtering (Zakai equation, Benes filter, etc.) and their application to trajectory tracking."
+      en: "First-year Master’s thesis providing an introduction to stochastic calculus tools to explore the theory of non-linear filtering (Zakai equation, Benes filter, etc.) and their application to trajectory tracking."
     },
     lien_pdf: "assets/memoires/memoire_filtrage_velcin.pdf",
     lien_slides: "assets/memoires/slide_filtrage_velcin.pdf",
@@ -258,7 +258,7 @@ function renderSoftskills() {
 function renderCv() {
   const list = document.getElementById("cv-button");
   list.innerHTML = cvlist.map(c => `
-      <a class="btn" href=${c.lien_pdf[currentLang]} download data-i18n="cv.button">↓ Télécharger le CV (PDF)</a>
+      <a class="btn" href=${c.lien_pdf[currentLang]} download data-i18n="cv.button">${c.texte[currentLang]}</a>
   `).join("");
 }
 
