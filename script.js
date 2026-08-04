@@ -109,6 +109,11 @@ const softskills = [
       titre: { fr:"Programmation", en:"Programming"},
       description : {fr: "<ul> <li id='ss'>Python (NumPy, SciPy)</li> <li id='ss'>R</li> <li id='ss'>MATLAB</li> <li id='ss'>SQL</li> </ul>", en: "<ul> <li id='ss'>Python (NumPy, SciPy)</li> <li id='ss'>R</li> <li id='ss'>MATLAB</li> <li id='ss'>SQL</li> </ul>"},
    },
+   {
+      titre: { fr:"Bureautique", en:"Office automation"},
+      description : {fr: "<ul> <li id='ss'>LaTeX</li> <li id='ss'>Microsoft Office</li></ul>", en: "<ul> <li id='ss'>LaTeX</li> <li id='ss'>Microsoft Office</li></ul>"},
+   },
+
 ];
 
 const cvlist = [
