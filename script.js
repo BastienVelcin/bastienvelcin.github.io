@@ -107,7 +107,7 @@ const experiences = [
 const softskills = [
    {
       titre: { fr:"Programmation", en:"Programming"},
-      description : {fr: "Python, R, MATLAB et SQL", en: "Python, R, MATLAB and SQL"}
+      description : {fr: "<ul> <li>Point 1</li> <li>Point 2</li> <li>Point 3</li> </ul>", en: "Python, R, MATLAB and SQL"}
    },
    {
       titre: { fr:"Bureautique", en:"Office automation"},
