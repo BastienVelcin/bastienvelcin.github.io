@@ -20,7 +20,7 @@
   --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
 
   --nav-w: 240px;
-  --content-max: 760px;
+  --content-max: 920px;
   --radius: 3px;
 }
 
@@ -58,7 +58,7 @@ a:hover { text-decoration: underline; }
 ---------------------------------------------------------------- */
 .layout {
   display: flex;
-  min-height: 200vh;
+  min-height: 100vh;
 }
 
 main.content {
