@@ -181,7 +181,7 @@ function renderMemoires() {
   `).join("");
 }
 
-function renderDiplomes() {
+/* function renderDiplomes() {
   const list = document.getElementById("diplomes-list");
   list.innerHTML = diplomes.map(d => `
     <div class="memoire-item reveal in">
@@ -194,7 +194,7 @@ function renderDiplomes() {
     </div>
   `).join("");
 }
-
+*/ 
 /* ===================================================================
    Langue : application au DOM + persistance
 =================================================================== */
@@ -293,7 +293,6 @@ document.addEventListener("DOMContentLoaded", () => {
   updateLangButtons();
   renderProjets();
   renderMemoires();
-   renderDiplomes():
   setupLangSwitch();
   setupScrollObservers();
   setupMobileMenu();
