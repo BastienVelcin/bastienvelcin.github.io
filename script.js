@@ -140,7 +140,7 @@ function renderDiplomes() {
 
 function renderExperiences() {
   const list = document.getElementById("experiences-list");
-  list.innerHTML = diplomes.map(e => `
+  list.innerHTML = experiences.map(e => `
     <div class="memoire-item reveal">
       <p class="year">${e.annee}</p>
       <div>
