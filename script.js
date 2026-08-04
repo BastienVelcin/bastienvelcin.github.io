@@ -249,6 +249,7 @@ function setLang(lang) {
   renderProjets();
   renderMemoires();
    renderDiplomes();
+   renderExperiences();
 }
 
 function setupLangSwitch() {
