@@ -123,7 +123,7 @@ const softskills = [
    },
       {
       titre: { fr:"Intérets en recherche mathématique", en:"Research Interests"},
-      description : {fr: "<ul> <li id='ss'>Calcul stochastique & EDS</li> <li id='ss'>Filtrage non-linéaire</li> <li id='ss'>Simulation et Méthodes de Monte Carlo</li></ul>  <li id='ss'>Applications à la finance quantitative </li> </ul>", en: "<ul> <li id='ss'>Stochastic Calculus & SDE</li> <li id='ss'>Non-linear filtering</li> <li id='ss'>Simulation and Monte Carlo Methods</li></ul>  <li id='ss'>Application to quantitative finance</li> </ul>"},
+      description : {fr: "<ul> <li id='ss'>Calcul stochastique & EDS</li> <li id='ss'>Filtrage non-linéaire</li> <li id='ss'>Simulation et Méthodes de Monte Carlo</li> <li id='ss'>Applications à la finance quantitative </li> </ul>", en: "<ul> <li id='ss'>Stochastic Calculus & SDE</li> <li id='ss'>Non-linear filtering</li> <li id='ss'>Simulation and Monte Carlo Methods</li>  <li id='ss'>Application to quantitative finance</li> </ul>"},
    },
 
 
