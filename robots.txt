@@ -1,0 +1,3 @@
+Allow: /
+
+Sitemap: https://bastienvelcin.github.io/sitemap.xml
