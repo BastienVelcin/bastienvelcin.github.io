@@ -399,7 +399,7 @@ h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: 2rem; }
   list-style: none;
   padding: 0;
 }
-.cv-highlights li:no(#ss) {
+.cv-highlights li:not(#ss) {
   font-size: 0.88rem;
   color: var(--ink-soft);
   border-left: 2px solid var(--steel);
