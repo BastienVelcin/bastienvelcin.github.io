@@ -107,15 +107,23 @@ const experiences = [
 const softskills = [
    {
       titre: { fr:"Programmation", en:"Programming"},
-      description : {fr: "<ul> <li id='ss'>Point 1</li> <li id='ss'>Point 2</li> <li id='ss'>Point 3</li> </ul>", en: "Python, R, MATLAB and SQL"}
+      description : {fr: "<ul> <li id='ss'>Python (NumPy, SciPy)</li> <li id='ss'>R</li> <li id='ss'>MATLAB</li> <li id='ss'>SQL</li> </ul>", en: "<ul> <li id='ss'>Python (NumPy, SciPy)</li> <li id='ss'>R</li> <li id='ss'>MATLAB</li> <li id='ss'>SQL</li> </ul>"}
    },
    {
       titre: { fr:"Bureautique", en:"Office automation"},
-      description : {fr: "LaTeX, Microsoft Office", en: "LaTeX, Microsoft Office"}
+      description : {fr: "<ul> <li id='ss'>LaTeX</li> <li id='ss'>Microsoft Office</li></ul>", en: "<ul> <li id='ss'>LaTeX</li> <li id='ss'>Microsoft Office</li></ul>"}
    },
    {
       titre: { fr:"Langues", en:"Languages"},
-      description : {fr: "Français (Natif), Anglais (B2)", en: "French (Native), English (B2)"}
+      description : {fr: "<ul> <li id='ss'>Français (Natif)</li> <li id='ss'>Anglais (B2)</li></ul>", en: "<ul> <li id='ss'>French (Native)</li> <li id='ss'>English (B2)</li></ul>"}
+   },
+    {
+      titre: { fr:"XCompétences mathématiques", en:"Mathematical skills"},
+      description : {fr: "<ul> <li id='ss'>Probabilités</li> <li id='ss'>Calcul stochastique</li> <li id='ss'>Statistiques</li></ul>  <li id='ss'>Analyse numérique</li>  <li id='ss'>Optimisation</li> <\ul>", en: "<ul> <li id='ss'>Probability Theory</li> <li id='ss'>Stochastic Calculus</li> <li id='ss'>Statistics</li></ul>  <li id='ss'>Numerical Analysis</li>  <li id='ss'>Optimization</li> <\ul>"}
+   },
+   {
+      titre: { fr:"Intérets en recherche mathématique", en:"Research Interests"},
+      description : {fr: "<ul> <li id='ss'>Calcul stochastique & EDS</li> <li id='ss'>Filtrage non-linéaire</li> <li id='ss'>Simulation et Méthodes de Monte Carlo</li></ul>  <li id='ss'>Applications à la finance quantitative</li> <\ul>", en: "<ul> <li id='ss'>Stochastic Calculus & SDE</li> <li id='ss'>Non-linear filtering</li> <li id='ss'>Simulation and Monte Carlo Methods</li></ul>  <li id='ss'>Application to quantitative finance</li> <\ul>"}
    },
 ];
 
