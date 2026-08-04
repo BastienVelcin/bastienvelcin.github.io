@@ -165,6 +165,7 @@ const i18n = {
    
   "section.diplomes.title": { fr: "Formations & Diplômes", en: "Training & Qualifications" },
    "section.experiences.title": { fr: "Expériences professionelles", en: "Professional experiences" },
+   "section.softskills.title": { fr: "Compétences", en: "Technical skills" },
 
   "section.cv.eyebrow": { fr: "04 — Parcours", en: "04 — Background" },
   "section.cv.title": { fr: "Curriculum Vitæ", en: "Curriculum Vitae" },
