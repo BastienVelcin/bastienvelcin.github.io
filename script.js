@@ -233,8 +233,8 @@ function renderExperiences() {
 }
 
 function renderSoftskills() {
-  const list = document.getElementById("experiences-list");
-  list.innerHTML = experiences.map(s => `
+  const list = document.getElementById("softskills-list");
+  list.innerHTML = softskills.map(s => `
      <ul class="cv-highlights">
           <li><strong data-i18n="cv.h1.label">${s.titre[currentLang]}</strong><span data-i18n="cv.h1.value">${s.description[currentLang]}</span></li>
       </ul>
