@@ -85,7 +85,15 @@ const diplomes = [
     titre: { fr: "Baccalauréat Général (Mention : Très bien)", en: "General Baccalaureate (Honours: Highest Honours)"},
     universite: { fr: "Lycée Antoine de Saint-Exupéry - Fameck", en: "Antoine de Saint-Exupéry High School - Fameck"},
     description: { fr: "Spécialités : Mathématiques, Numériques et Sciences Informatiques, Physique-Chimie.", en: "Specializations: Mathematics, Digital Sciences and Computer Science, Physics and Chemistry"},
-  }
+  },
+   {
+      titre: { fr:"Compétences mathématiques", en:"Mathematical skills"},
+      description : {fr: "<ul> <li id='ss'>Probabilités</li> <li id='ss'>Calcul stochastique</li> <li id='ss'>Statistiques</li>  <li id='ss'>Analyse numérique</li>  <li id='ss'>Optimisation</li> <\ul>", en: "<ul> <li id='ss'>Probability Theory</li> <li id='ss'>Stochastic Calculus</li> <li id='ss'>Statistics</li> <li id='ss'>Numerical Analysis</li>  <li id='ss'>Optimization</li> <\ul>"},
+   },
+   {
+      titre: { fr:"Intérets en recherche mathématique", en:"Research Interests"},
+      description : {fr: "<ul> <li id='ss'>Calcul stochastique & EDS</li> <li id='ss'>Filtrage non-linéaire</li> <li id='ss'>Simulation et Méthodes de Monte Carlo</li></ul>  <li id='ss'>Applications à la finance quantitative</li> <\ul>", en: "<ul> <li id='ss'>Stochastic Calculus & SDE</li> <li id='ss'>Non-linear filtering</li> <li id='ss'>Simulation and Monte Carlo Methods</li></ul>  <li id='ss'>Application to quantitative finance</li> <\ul>"},
+   },
 ];
 
 const experiences = [
