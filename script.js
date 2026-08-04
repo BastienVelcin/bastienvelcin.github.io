@@ -37,8 +37,8 @@ const memoires = [
     },
     lien_pdf: "assets/memoires/memoire_filtrage_velcin.pdf",
     lien_slides: "assets/memoires/slide_filtrage_velcin.pdf",
-    lien_pdf_label: { fr: "Lire le mémoire (PDF) →", en: "Read the thesis (PDF) →" },
-    lien_slides_label: { fr: "Slides de soutenance →", en: "Defense slides →" }
+    lien_pdf_label: { fr: "Lire le mémoire (PDF) →", en: "Read the thesis (French, PDF) →" },
+    lien_slides_label: { fr: "Slides de soutenance →", en: "Defense slides (French) →" }
   },
    {
     annee: "2025",
@@ -49,8 +49,8 @@ const memoires = [
     },
     lien_pdf: "assets/memoires/memoire_analyse_fractionnaire_loukili_velcin.pdf",
     lien_slides: "assets/memoires/slide_analyse_fractionnaire_loukili_velcin.pdf",
-    lien_pdf_label: { fr: "Lire le mémoire (PDF) →", en: "Read the thesis (PDF) →" },
-    lien_slides_label: { fr: "Slides de soutenance →", en: "Defense slides →" }
+    lien_pdf_label: { fr: "Lire le mémoire (PDF) →", en: "Read the thesis (French, PDF) →" },
+    lien_slides_label: { fr: "Slides de soutenance →", en: "Defense slides (French) →" }
   },
    {
     annee: "2025",
@@ -61,8 +61,8 @@ const memoires = [
     },
     lien_pdf: "assets/memoires/markov_mcmc_velcin.pdf",
     lien_slides: null,
-    lien_pdf_label: { fr: "Lire le mémoire (PDF) →", en: "Read the thesis (PDF) →" },
-    lien_slides_label: { fr: "Slides de soutenance →", en: "Defense slides →" }
+    lien_pdf_label: { fr: "Lire le mémoire (PDF) →", en: "Read the thesis (French, PDF) →" },
+    lien_slides_label: { fr: "Slides de soutenance →", en: "Defense slides (French) →" }
   }
 ];
 
@@ -121,7 +121,8 @@ const softskills = [
 
 const cvlist = [
    {
-      lien_pdf: {fr : "assets/cv/CV.pdf", en:"assets/cv/CV_EN.pdf"}
+      lien_pdf: {fr : "assets/cv/CV.pdf", en:"assets/cv/CV_EN.pdf"},
+      texte: { fr: "↓ Télécharger mon CV (PDF)", en: "↓ Download CV (PDF)" },
    },
 ];
 /* =====================================================================
@@ -157,9 +158,10 @@ const i18n = {
 
   "section.cv.eyebrow": { fr: "04 — Parcours", en: "04 — Background" },
   "section.cv.title": { fr: "Curriculum Vitæ", en: "Curriculum Vitae" },
+   "section.cv.titlebox": { fr: "Voulez-vous en savoir plus ?", en: "Would you like to know more?" },
   "cv.summary": {
-    fr: "Version à jour de mon CV, avec mon parcours académique, mes compétences techniques et mes expériences en lien avec les mathématiques appliquées.",
-    en: "Up-to-date version of my CV, with my academic background, technical skills and experience related to applied mathematics."
+    fr: "Téléchargez ci-dessous la version complète de mon CV, avec mon parcours académique, mes compétences techniques et mes expériences en lien avec les mathématiques appliquées.",
+    en: "Download the full version of my CV below, including my academic background, technical skills, and experience related to applied mathematics."
   },
   "cv.button": { fr: "↓ Télécharger le CV (PDF)", en: "↓ Download CV (PDF)" },
   "cv.h1.label": { fr: "M1", en: "M1" },
