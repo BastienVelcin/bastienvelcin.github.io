@@ -1,27 +1,37 @@
 /* =====================================================================
-   Contenu éditable : ajoutez / modifiez vos projets et mémoires ici.
+   Contenu éditable — FR / EN
+   Ajoutez / modifiez vos projets et mémoires ici, dans les deux langues.
    Pas besoin de toucher au HTML — les cartes sont générées automatiquement.
 ===================================================================== */
 
 const projets = [
   {
-    tag: "Python · Modélisation",
-    titre: "Bibliothèque PyStochastic",
-    description: "Création d'une bibliothèque python destinée au calcul stochastique et à la modélisation stochastique. Le projet est en cours de développement.",
-    lien_code: "https://github.com/BastienVelcin/PyStochastic",
+    tag: { fr: "Python · Simulation", en: "Python · Simulation" },
+    titre: { fr: "Filtre de Kalman étendu — suivi radar", en: "Extended Kalman Filter — radar tracking" },
+    description: {
+      fr: "Implémentation d'un EKF pour le suivi d'une cible en mouvement à partir de mesures bruitées d'angle et de distance.",
+      en: "Implementation of an EKF to track a moving target from noisy angle and range measurements."
+    },
+    lien_code: "https://github.com/votre-pseudo/projet-ekf-radar",
     lien_demo: null
   },
   {
-    tag: "MATLAB · Modélisation",
-    titre: "Méthodes  des Élements Finis en dimension 2",
-    description: "Application de la méthode des éléments finis à un domaine rectange perforé par une ellipse. Projet co-réalisé avec MULLER Célia.",
+    tag: { fr: "R · Statistiques", en: "R · Statistics" },
+    titre: { fr: "Estimation par chaînes de Markov", en: "Markov chain estimation" },
+    description: {
+      fr: "Étude de la convergence d'une chaîne de Markov et estimation de sa mesure invariante sur données simulées.",
+      en: "Study of the convergence of a Markov chain and estimation of its invariant measure on simulated data."
+    },
     lien_code: "https://github.com/votre-pseudo/projet-markov",
     lien_demo: null
   },
   {
-    tag: "LaTeX · Cours",
-    titre: "Notes de cours — calcul stochastique",
-    description: "Synthèse rédigée du cours de calcul stochastique : intégrale d'Itô, formule d'Itô, équations différentielles stochastiques.",
+    tag: { fr: "LaTeX · Cours", en: "LaTeX · Course notes" },
+    titre: { fr: "Notes de cours — calcul stochastique", en: "Course notes — stochastic calculus" },
+    description: {
+      fr: "Synthèse rédigée du cours de calcul stochastique : intégrale d'Itô, formule d'Itô, équations différentielles stochastiques.",
+      en: "Written summary of the stochastic calculus course: Itô integral, Itô's formula, stochastic differential equations."
+    },
     lien_code: "https://github.com/votre-pseudo/notes-calcul-stochastique",
     lien_demo: null
   }
@@ -30,78 +40,87 @@ const projets = [
 const memoires = [
   {
     annee: "2026",
-    titre: "Calcul stochastique appliqué à quelques problèmes de filtrage non-linéaire",
-    description: "Mémoire de Master 1 portant sur une introduction aux outils de calcul stochastique en vue d'aborder la théorie du filtrage non linéaire (équation de Zakai, filtre de Benes, ...) et leur application au suivi de trajectoires.",
-    lien_pdf: "assets/memoires/memoire_filtrage_velcin.pdf",
-    lien_slides: "assets/memoires/slide_filtrage_velcin.pdf"
-  },
-   {
-    annee: "2025",
-    titre: "Introduction à l'analyse fractionnaire",
-    description: "Mémoire de Licence 3, coécrit avec LOUKILI Douae, visant à introduire une généralisation des opérateurs différentiels usuels (dérivation, intégration) à des ordres non-entiers ainsi que diverses méthodes de résolution d'équations différentielles fractionnaires.",
-    lien_pdf: "assets/memoires/memoire_analyse_fractionnaire_loukili_velcin.pdf",
-    lien_slides: "assets/memoires/slide_analyse_fractionnaire_loukili_velcin.pdf"
-  },
-   {
-    annee: "2025",
-    titre: "Chaînes de Markov et Méthodes de Monte Carlo par Chaines de Markov : quelques éléments de théorie et simulation du Modèle d'Ising",
-    description: "Rapport issu de mon stage de recherche au sein de l'Institut Élie Cartan de Lorraine (IECL), ayant pour objectif d'introduire les chaînes de Markov et les méthodes MCMC, avec une application à la simulation du modèle d'Ising en 2D.",
-    lien_pdf: "assets/memoires/markov_mcmc_velcin.pdf",
-    lien_slides: null
+    titre: { fr: "Filtrage non linéaire : théorie et applications", en: "Nonlinear filtering: theory and applications" },
+    description: {
+      fr: "Mémoire de M1 portant sur les méthodes de filtrage non linéaire (filtre de Kalman étendu, filtre particulaire) et leur application au suivi de trajectoires.",
+      en: "M1 thesis on nonlinear filtering methods (extended Kalman filter, particle filter) and their application to trajectory tracking."
+    },
+    lien_pdf: "assets/memoires/memoire-filtrage-non-lineaire.pdf",
+    lien_slides: "assets/memoires/soutenance-slides.pdf",
+    lien_pdf_label: { fr: "Lire le mémoire (PDF) →", en: "Read the thesis (PDF) →" },
+    lien_slides_label: { fr: "Slides de soutenance →", en: "Defense slides →" }
   }
 ];
 
-const diplomes = [
-  {
-    annee: "2025-2026",
-    titre: "Master 1 - Mathématiques & Applications",
-    universite: "Université de Lorraine - Site de Metz",
-    description: "Perfectionnement de notions de mathématiques appliquées : Probabilités, Statistiques, Optimisation, Algorithmie, Réseaux de neurones, Analyse de données, Modélisation.",
-  },
-   
-   {
-    annee: "2022-2025",
-    titre: "Licence - Mathématiques (Mention : Très bien)",
-    universite: "Université de Lorraine - Site de Metz",
-    description: "Formation approfondie en mathématiques fondamentales et appliquées : analyse, algèbre, algèbre linéaire et bilinéaire, probabilités, statistiques, analyse numérique, simulation, calcul différentiel.",
-  },
-   {
-    annee: "2022",
-    titre: "Baccalauréat Général (Mention : Très bien)",
-    universite: "Lycée Antoine de Saint-Exupéry - Fameck",
-    description: "Spécialités : Mathématiques, Numériques et Sciences Informatiques, Physique-Chimie",
-  }
-];
+/* =====================================================================
+   Dictionnaire de traduction des textes statiques
+===================================================================== */
+const i18n = {
+  "nav.accueil": { fr: "Accueil", en: "Home" },
+  "nav.projets": { fr: "Projets", en: "Projects" },
+  "nav.memoires": { fr: "Mémoires", en: "Theses" },
+  "nav.cv": { fr: "CV", en: "CV" },
+  "nav.contact": { fr: "Contact", en: "Contact" },
 
-const experiences = [
-  {
-    annee: "2024-2026",
-    titre: "Tuteur en Mathématiques",
-    lieu: "Université de Lorraine - Site de Metz",
-    description: "Organisation et conduite de séances pédagogiques de tutorat pour les L1 Mathématiques et L1 Mathématiques pour le Professorat des Écoles (PPPE) en logique, analyse, algèbre, et algèbre linéaire",
+  "hero.eyebrow": { fr: "Portfolio universitaire — M1 Mathématiques", en: "University Portfolio — M1 Mathematics" },
+  "hero.tagline": {
+    fr: "Étudiant en Master 1 de Mathématiques, spécialisé en probabilités et analyse stochastique. Mémoire de recherche sur le filtrage non linéaire.",
+    en: "M1 Mathematics student, focused on probability and stochastic analysis. Research thesis on nonlinear filtering."
   },
-   
-   {
-    annee: "2024-2025",
-    titre: "Stage de recherche en Mathématiques",
-    lieu: "Institut Élie Cartan de Lorraine (IECL)",
-    description: "Analyse de publications scientifiques traitant des chaînes de Markov et des Méthodes de Monte Carlo par Chaînes de Markov (MCMC). Rédaction d’un rapport de recherche structuré, synthétisant les résultats obtenus et la méthodologie.",
+  "hero.link.projets": { fr: "Voir mes projets →", en: "See my projects →" },
+  "hero.link.memoires": { fr: "Lire mes mémoires →", en: "Read my theses →" },
+  "hero.link.cv": { fr: "Consulter mon CV →", en: "View my CV →" },
+
+  "traj.true": { fr: "trajectoire réelle", en: "true trajectory" },
+  "traj.est": { fr: "estimation filtrée", en: "filtered estimate" },
+
+  "section.projets.eyebrow": { fr: "02 — Travaux", en: "02 — Work" },
+  "section.projets.title": { fr: "Projets", en: "Projects" },
+
+  "section.memoires.eyebrow": { fr: "03 — Recherche", en: "03 — Research" },
+  "section.memoires.title": { fr: "Mémoires", en: "Theses" },
+
+  "section.cv.eyebrow": { fr: "04 — Parcours", en: "04 — Background" },
+  "section.cv.title": { fr: "Curriculum Vitæ", en: "Curriculum Vitae" },
+  "cv.summary": {
+    fr: "Version à jour de mon CV, avec mon parcours académique, mes compétences techniques et mes expériences en lien avec les mathématiques appliquées.",
+    en: "Up-to-date version of my CV, with my academic background, technical skills and experience related to applied mathematics."
   },
-];
+  "cv.button": { fr: "↓ Télécharger le CV (PDF)", en: "↓ Download CV (PDF)" },
+  "cv.h1.label": { fr: "M1", en: "M1" },
+  "cv.h1.value": { fr: "Mathématiques — probabilités & stochastique", en: "Mathematics — probability & stochastic analysis" },
+  "cv.h2.label": { fr: "Mémoire", en: "Thesis" },
+  "cv.h2.value": { fr: "Filtrage non linéaire", en: "Nonlinear filtering" },
+  "cv.h3.label": { fr: "Outils", en: "Tools" },
+  "cv.h3.value": { fr: "LaTeX, Python, R", en: "LaTeX, Python, R" },
+
+  "section.contact.eyebrow": { fr: "05 — Contact", en: "05 — Contact" },
+  "section.contact.title": { fr: "Me contacter", en: "Get in touch" },
+
+  "ui.menu": { fr: "Menu", en: "Menu" },
+
+  "footer.text": {
+    fr: "Site construit avec HTML/CSS/JS, hébergé sur GitHub Pages.",
+    en: "Site built with HTML/CSS/JS, hosted on GitHub Pages."
+  }
+};
+
+const LANG_KEY = "portfolio-lang";
+let currentLang = localStorage.getItem(LANG_KEY) || "fr";
 
 /* ===================================================================
-   Rendu des cartes
+   Rendu des cartes (langue courante)
 =================================================================== */
 function renderProjets() {
   const grid = document.getElementById("projets-grid");
   grid.innerHTML = projets.map(p => `
-    <article class="card reveal">
-      <p class="tag">${p.tag}</p>
-      <h3>${p.titre}</h3>
-      <p>${p.description}</p>
+    <article class="card reveal in">
+      <p class="tag">${p.tag[currentLang]}</p>
+      <h3>${p.titre[currentLang]}</h3>
+      <p>${p.description[currentLang]}</p>
       <div class="card-links">
-        ${p.lien_code ? `<a href="${p.lien_code}" target="_blank" rel="noopener">Code →</a>` : ""}
-        ${p.lien_demo ? `<a href="${p.lien_demo}" target="_blank" rel="noopener">Démo →</a>` : ""}
+        ${p.lien_code ? `<a href="${p.lien_code}" target="_blank" rel="noopener">${currentLang === "fr" ? "Code →" : "Code →"}</a>` : ""}
+        ${p.lien_demo ? `<a href="${p.lien_demo}" target="_blank" rel="noopener">${currentLang === "fr" ? "Démo →" : "Demo →"}</a>` : ""}
       </div>
     </article>
   `).join("");
@@ -110,47 +129,52 @@ function renderProjets() {
 function renderMemoires() {
   const list = document.getElementById("memoires-list");
   list.innerHTML = memoires.map(m => `
-    <div class="memoire-item reveal">
+    <div class="memoire-item reveal in">
       <p class="year">${m.annee}</p>
       <div>
-        <h3>${m.titre}</h3>
-        <p>${m.description}</p>
+        <h3>${m.titre[currentLang]}</h3>
+        <p>${m.description[currentLang]}</p>
         <div class="card-links">
-          ${m.lien_pdf ? `<a href="${m.lien_pdf}" target="\_blank" rel="noopener" type="application/pdf" >Lire le mémoire (PDF) →</a>` : ""}
-          ${m.lien_slides ? `<a href="${m.lien_slides}" target="\_blank" rel="noopener">Slides de soutenance →</a>` : ""}
+          ${m.lien_pdf ? `<a href="${m.lien_pdf}" target="_blank" rel="noopener">${m.lien_pdf_label[currentLang]}</a>` : ""}
+          ${m.lien_slides ? `<a href="${m.lien_slides}" target="_blank" rel="noopener">${m.lien_slides_label[currentLang]}</a>` : ""}
         </div>
       </div>
     </div>
   `).join("");
 }
 
-function renderDiplomes() {
-  const list = document.getElementById("diplomes-list");
-  list.innerHTML = diplomes.map(d => `
-    <div class="memoire-item reveal">
-      <p class="year">${d.annee}</p>
-      <div>
-        <h3>${d.titre}</h3>
-        <h4>${d.universite}</h4>
-        <p>${d.description}</p>
-      </div>
-    </div>
-  `).join("");
+/* ===================================================================
+   Langue : application au DOM + persistance
+=================================================================== */
+function applyStaticTranslations() {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (i18n[key]) el.textContent = i18n[key][currentLang];
+  });
 }
 
-function renderExperiences() {
-  const list = document.getElementById("experiences-list");
-  list.innerHTML = experiences.map(e => `
-    <div class="memoire-item reveal">
-      <p class="year">${e.annee}</p>
-      <div>
-        <h3>${e.titre}</h3>
-        <h4>${e.lieu}</h4>
-        <p>${e.description}</p>
-      </div>
-    </div>
-  `).join("");
+function updateLangButtons() {
+  document.querySelectorAll(".lang-switch").forEach(btn => {
+    btn.setAttribute("data-current", currentLang);
+  });
 }
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem(LANG_KEY, lang);
+  document.documentElement.lang = lang;
+  applyStaticTranslations();
+  updateLangButtons();
+  renderProjets();
+  renderMemoires();
+}
+
+function setupLangSwitch() {
+  document.querySelectorAll(".lang-switch").forEach(btn => {
+    btn.addEventListener("click", () => setLang(currentLang === "fr" ? "en" : "fr"));
+  });
+}
+
 /* ===================================================================
    Navigation active au scroll + reveal on scroll
 =================================================================== */
@@ -181,7 +205,10 @@ function setupScrollObservers() {
     });
   }, { threshold: 0.15 });
 
-  document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+  document.querySelectorAll(".card, .memoire-item").forEach(el => {
+    el.classList.add("reveal");
+    revealObserver.observe(el);
+  });
 }
 
 /* ===================================================================
@@ -195,14 +222,12 @@ function setupMobileMenu() {
   btn.addEventListener("click", () => {
     const open = menu.classList.toggle("open");
     btn.setAttribute("aria-expanded", String(open));
-    btn.textContent = open ? "Fermer" : "Menu";
   });
 
   menu.querySelectorAll("a").forEach(a => {
     a.addEventListener("click", () => {
       menu.classList.remove("open");
       btn.setAttribute("aria-expanded", "false");
-      btn.textContent = "Menu";
     });
   });
 }
@@ -211,10 +236,12 @@ function setupMobileMenu() {
    Init
 =================================================================== */
 document.addEventListener("DOMContentLoaded", () => {
+  document.documentElement.lang = currentLang;
+  applyStaticTranslations();
+  updateLangButtons();
   renderProjets();
   renderMemoires();
-   renderDiplomes();
-   renderExperiences();
+  setupLangSwitch();
   setupScrollObservers();
   setupMobileMenu();
   const y = document.getElementById("year");
