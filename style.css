@@ -145,79 +145,6 @@ main.content {
 }
 .sidebar .sidebar-foot a:hover { color: var(--raspberry); }
 
-/* ---- Language switch ---- */
-.lang-switch {
-  position: absolute;
-  bottom: 6.2rem;
-  left: 2.2rem;
-  right: 2.2rem;
-  background: var(--paper);
-  border: 1px solid var(--paper-line);
-  border-radius: 999px;
-  padding: 0.3rem;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.05em;
-  cursor: pointer;
-  display: flex;
-  gap: 0;
-  overflow: hidden;
-  transition: border-color 0.2s ease;
-}
-.lang-switch:hover { border-color: var(--raspberry); }
-
-css
-.lang-switch.mobile-float { display: none; }
-
-@media (max-width: 900px) {
-  .lang-switch.mobile-float {
-    display: flex;
-    position: fixed;
-    bottom: 1.2rem;
-    right: 1.2rem;
-    width: 92px;
-    z-index: 100;
-    background: var(--paper);
-    box-shadow: 0 4px 14px rgba(28, 35, 51, 0.18);
-  }
-}
-
-.lang-switch .lang-sep { display: none; }
-
-.lang-switch [data-lang-btn] {
-  position: relative;
-  z-index: 1;
-  flex: 1 1 50%;
-  text-align: center;
-  padding: 0.32rem 0;
-  border-radius: 999px;
-  color: var(--ink-faint);
-  transition: color 0.25s ease;
-}
-
-.lang-switch::before {
-  content: '';
-  position: absolute;
-  top: 0.3rem;
-  bottom: 0.3rem;
-  left: 0.3rem;
-  width: calc(50% - 0.3rem);
-  background: var(--raspberry-soft);
-  border: 1px solid var(--raspberry);
-  border-radius: 999px;
-  transition: transform 0.28s cubic-bezier(0.65, 0, 0.35, 1);
-}
-
-.lang-switch[data-current="en"]::before {
-  transform: translateX(calc(100% - 0.1rem));
-}
-
-.lang-switch[data-current="fr"] [data-lang-btn="fr"],
-.lang-switch[data-current="en"] [data-lang-btn="en"] {
-  color: var(--raspberry);
-  font-weight: 600;
-}
-
 /* Mobile top bar (replaces the sidebar under 900px) */
 .topbar { display: none; }
 
@@ -460,8 +387,6 @@ footer.site-foot {
     text-transform: uppercase;
   }
 
-  .topbar-right { display: flex; align-items: center; gap: 0.7rem; }
-
   .topbar button {
     background: none;
     border: 1px solid var(--ink);
@@ -470,15 +395,6 @@ footer.site-foot {
     font-size: 0.78rem;
     padding: 0.4rem 0.8rem;
     border-radius: var(--radius);
-  }
-
-  .topbar .lang-switch {
-    position: relative;
-    width: 92px;
-    bottom: auto;
-    left: auto;
-    right: auto;
-    border: 1px solid var(--paper-line);
   }
 
   .topbar-menu {
