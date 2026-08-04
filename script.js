@@ -113,6 +113,11 @@ const softskills = [
       titre: { fr:"Bureautique", en:"Office automation"},
       description : {fr: "<ul> <li id='ss'>LaTeX</li> <li id='ss'>Microsoft Office</li></ul>", en: "<ul> <li id='ss'>LaTeX</li> <li id='ss'>Microsoft Office</li></ul>"},
    },
+   {
+      titre: { fr:"Langues", en:"Languages"},
+      description : {fr: "<ul> <li id='ss'>Français (Natif)</li> <li id='ss'>Anglais (B2)</li></ul>", en: "<ul> <li id='ss'>French (Native)</li> <li id='ss'>English (B2)</li></ul>"},
+   },
+
 
 ];
 
