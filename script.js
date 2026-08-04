@@ -73,6 +73,28 @@ const diplomes = [
   }
 ];
 
+const experiences = [
+  {
+    annee: "2025-2026",
+    titre: "Master 1 - Mathématiques & Applications",
+    lieu: "Université de Lorraine - Site de Metz",
+    description: "Perfectionnement de notions de mathématiques appliquées : Probabilités, Statistiques, Optimisation, Algorithmie, Réseaux de neurones, Analyse de données, Modélisation.",
+  },
+   
+  {
+    annee: "2025-2026",
+    titre: "Master 1 - Mathématiques & Applications",
+    lieu: "Université de Lorraine - Site de Metz",
+    description: "Perfectionnement de notions de mathématiques appliquées : Probabilités, Statistiques, Optimisation, Algorithmie, Réseaux de neurones, Analyse de données, Modélisation.",
+  },
+  {
+    annee: "2025-2026",
+    titre: "Master 1 - Mathématiques & Applications",
+    lieu: "Université de Lorraine - Site de Metz",
+    description: "Perfectionnement de notions de mathématiques appliquées : Probabilités, Statistiques, Optimisation, Algorithmie, Réseaux de neurones, Analyse de données, Modélisation.",
+  },
+];
+
 /* ===================================================================
    Rendu des cartes
 =================================================================== */
@@ -117,6 +139,20 @@ function renderDiplomes() {
         <h3>${d.titre}</h3>
         <h4>${d.universite}</h4>
         <p>${d.description}</p>
+      </div>
+    </div>
+  `).join("");
+}
+
+function renderExperiences() {
+  const list = document.getElementById("experiences-list");
+  list.innerHTML = diplomes.map(e => `
+    <div class="memoire-item reveal">
+      <p class="year">${e.annee}</p>
+      <div>
+        <h3>${e.titre}</h3>
+        <h4>${e.lieu}</h4>
+        <p>${e.description}</p>
       </div>
     </div>
   `).join("");
@@ -184,6 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProjets();
   renderMemoires();
    renderDiplomes();
+   renderExperiences();
   setupScrollObservers();
   setupMobileMenu();
   const y = document.getElementById("year");
