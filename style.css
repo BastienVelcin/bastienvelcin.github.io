@@ -58,7 +58,7 @@ a:hover { text-decoration: underline; }
 ---------------------------------------------------------------- */
 .layout {
   display: flex;
-  min-height: 150vh;
+  min-height: 200vh;
 }
 
 main.content {
