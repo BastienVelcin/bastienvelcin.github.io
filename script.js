@@ -118,6 +118,12 @@ const softskills = [
       description : {fr: "Français (Natif), Anglais (B2)", en: "French (Native), English (B2)"}
    },
 ];
+
+const cvlist = [
+   {
+      lien_pdf: {fr : "assets/cv/CV.pdf", en:"assets/cv/CV_EN.pdf"}
+   },
+];
 /* =====================================================================
    Dictionnaire de traduction des textes statiques
 ===================================================================== */
@@ -247,6 +253,13 @@ function renderSoftskills() {
   `).join("");
 }
 
+function renderCv() {
+  const list = document.getElementById("cv-button");
+  list.innerHTML = cvlist.map(c => `
+      <a class="btn" href=${c.lien_pdf[currentLang]} download data-i18n="cv.button">↓ Télécharger le CV (PDF)</a>
+  `).join("");
+}
+
 /* ===================================================================
    Langue : application au DOM + persistance
 =================================================================== */
@@ -274,6 +287,7 @@ function setLang(lang) {
    renderDiplomes();
    renderExperiences();
    renderSoftskills();
+   renderCv();
 }
 
 function setupLangSwitch() {
@@ -351,6 +365,7 @@ document.addEventListener("DOMContentLoaded", () => {
    renderDiplomes();
    renderExperiences();
    renderSoftskills();
+   renderCv();
   setupLangSwitch();
   setupScrollObservers();
   setupMobileMenu();
