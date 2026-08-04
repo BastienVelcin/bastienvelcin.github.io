@@ -51,6 +51,26 @@ const memoires = [
   }
 ];
 
+const diplomes = [
+  {
+    annee: "2026",
+    titre: "Calcul stochastique appliqué à quelques problèmes de filtrage non-linéaire",
+    universite: "Mémoire de Master 1 portant sur une introduction aux outils de calcul stochastique en vue d'aborder la théorie du filtrage non linéaire (équation de Zakai, filtre de Benes, ...) et leur application au suivi de trajectoires.",
+    description: "assets/memoires/memoire_filtrage_velcin.pdf",
+  },
+   {
+    annee: "2026",
+    titre: "Calcul stochastique appliqué à quelques problèmes de filtrage non-linéaire",
+    universite: "Mémoire de Master 1 portant sur une introduction aux outils de calcul stochastique en vue d'aborder la théorie du filtrage non linéaire (équation de Zakai, filtre de Benes, ...) et leur application au suivi de trajectoires.",
+    description: "assets/memoires/memoire_filtrage_velcin.pdf",
+  },
+   {
+    annee: "2026",
+    titre: "Calcul stochastique appliqué à quelques problèmes de filtrage non-linéaire",
+    universite: "Mémoire de Master 1 portant sur une introduction aux outils de calcul stochastique en vue d'aborder la théorie du filtrage non linéaire (équation de Zakai, filtre de Benes, ...) et leur application au suivi de trajectoires.",
+    description: "assets/memoires/memoire_filtrage_velcin.pdf",
+  }
+];
 
 /* ===================================================================
    Rendu des cartes
@@ -87,6 +107,19 @@ function renderMemoires() {
   `).join("");
 }
 
+function renderDiplomes() {
+  const list = document.getElementById("diplomes-list");
+  list.innerHTML = diplomes.map(d => `
+    <div class="diplome-item reveal">
+      <p class="year">${d.annee}</p>
+      <div>
+        <h3>${d.titre}</h3>
+        <h4>${d.universite}</h4>
+        <p>${d.description}</p>
+      </div>
+    </div>
+  `).join("");
+}
 /* ===================================================================
    Navigation active au scroll + reveal on scroll
 =================================================================== */
@@ -149,6 +182,7 @@ function setupMobileMenu() {
 document.addEventListener("DOMContentLoaded", () => {
   renderProjets();
   renderMemoires();
+   renderDiplomes();
   setupScrollObservers();
   setupMobileMenu();
   const y = document.getElementById("year");
