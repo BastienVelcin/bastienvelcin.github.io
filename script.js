@@ -109,6 +109,14 @@ const softskills = [
       titre: { fr:"Programmation", en:"Programming"},
       description : {fr: "Python, R, MATLAB et SQL", en: "Python, R, MATLAB and SQL"}
    },
+   {
+      titre: { fr:"Bureautique", en:"Office automation"},
+      description : {fr: "LaTeX, Microsoft Office", en: "LaTeX, Microsoft Office"}
+   },
+   {
+      titre: { fr:"Langues", en:"Languages"},
+      description : {fr: "Français (Natif), Anglais (B2)", en: "French (Native), Englisg (B2)"}
+   },
 ];
 /* =====================================================================
    Dictionnaire de traduction des textes statiques
