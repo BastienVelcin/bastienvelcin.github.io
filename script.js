@@ -6,47 +6,61 @@
 
 const projets = [
   {
-    tag: { fr: "Python · Simulation", en: "Python · Simulation" },
-    titre: { fr: "Filtre de Kalman étendu — suivi radar", en: "Extended Kalman Filter — radar tracking" },
+    tag: { fr: "Python · Modélisation", en: "Python · Modeling" },
+    titre: { fr: "Bibliothèque PyStochastic", en: "PyStochastic Library" },
     description: {
-      fr: "Implémentation d'un EKF pour le suivi d'une cible en mouvement à partir de mesures bruitées d'angle et de distance.",
-      en: "Implementation of an EKF to track a moving target from noisy angle and range measurements."
+      fr: "Création d'une bibliothèque python destinée au calcul stochastique et à la modélisation stochastique. Le projet est en cours de développement.",
+      en: "Creation of a Python library for stochastic calculus and stochastic modeling. The project is currently under development."
     },
-    lien_code: "https://github.com/votre-pseudo/projet-ekf-radar",
+    lien_code: "https://github.com/BastienVelcin/PyStochastic",
     lien_demo: null
   },
   {
-    tag: { fr: "R · Statistiques", en: "R · Statistics" },
-    titre: { fr: "Estimation par chaînes de Markov", en: "Markov chain estimation" },
+    tag: { fr: "MATLAB · Modélisation", en: "MATLAB · Modeling" },
+    titre: { fr: "Méthode des Élements Finis en dimension 2", en: "2 Dimensional Finite Element Method" },
     description: {
-      fr: "Étude de la convergence d'une chaîne de Markov et estimation de sa mesure invariante sur données simulées.",
-      en: "Study of the convergence of a Markov chain and estimation of its invariant measure on simulated data."
+      fr: "Application de la méthode des éléments finis à un domaine rectange perforé par une ellipse. Projet co-réalisé avec MULLER Célia.",
+      en: "Application of the finite element method to a rectangular domain with an elliptical cutout. Project co-authored with MULLER Célia."
     },
-    lien_code: "https://github.com/votre-pseudo/projet-markov",
+    lien_code: "https://github.com/BastienVelcin/FiniteElementMethod",
     lien_demo: null
   },
-  {
-    tag: { fr: "LaTeX · Cours", en: "LaTeX · Course notes" },
-    titre: { fr: "Notes de cours — calcul stochastique", en: "Course notes — stochastic calculus" },
-    description: {
-      fr: "Synthèse rédigée du cours de calcul stochastique : intégrale d'Itô, formule d'Itô, équations différentielles stochastiques.",
-      en: "Written summary of the stochastic calculus course: Itô integral, Itô's formula, stochastic differential equations."
-    },
-    lien_code: "https://github.com/votre-pseudo/notes-calcul-stochastique",
-    lien_demo: null
-  }
 ];
 
 const memoires = [
   {
     annee: "2026",
-    titre: { fr: "Filtrage non linéaire : théorie et applications", en: "Nonlinear filtering: theory and applications" },
+    titre: { fr: "Calcul stochastique appliqué à quelques problèmes de filtrage non-linéaire", en: "Stochastic calculus applied to some non-linear filtering problems" },
     description: {
-      fr: "Mémoire de M1 portant sur les méthodes de filtrage non linéaire (filtre de Kalman étendu, filtre particulaire) et leur application au suivi de trajectoires.",
-      en: "M1 thesis on nonlinear filtering methods (extended Kalman filter, particle filter) and their application to trajectory tracking."
+      fr: "Mémoire de Master 1 portant sur une introduction aux outils de calcul stochastique en vue d'aborder la théorie du filtrage non linéaire (équation de Zakai, filtre de Benes, ...) et leur application au suivi de trajectoires.",
+      en: "First-year Master’s thesis providing an introduction to stochastic computation tools to explore the theory of non-linear filtering (Zakai equation, Benes filter, etc.) and their application to trajectory tracking."
     },
-    lien_pdf: "assets/memoires/memoire-filtrage-non-lineaire.pdf",
-    lien_slides: "assets/memoires/soutenance-slides.pdf",
+    lien_pdf: "assets/memoires/memoire_filtrage_velcin.pdf",
+    lien_slides: "assets/memoires/slide_filtrage_velcin.pdf",
+    lien_pdf_label: { fr: "Lire le mémoire (PDF) →", en: "Read the thesis (PDF) →" },
+    lien_slides_label: { fr: "Slides de soutenance →", en: "Defense slides →" }
+  },
+   {
+    annee: "2025",
+    titre: { fr: "Introduction à l'analyse fractionnaire", en: "Introduction to fractional calculus" },
+    description: {
+      fr: "Mémoire de Licence 3, coécrit avec LOUKILI Douae, visant à introduire une généralisation des opérateurs différentiels usuels (dérivation, intégration) à des ordres non-entiers ainsi que diverses méthodes de résolution d'équations différentielles fractionnaires.",
+      en: "Third-year undergraduate thesis, co-authored with LOUKILI Douae, aimed at generalising the standard differential operators (differentiation, integration) to non-integer orders, as well as various methods for solving fractional differential equations."
+    },
+    lien_pdf: "assets/memoires/memoire_analyse_fractionnaire_loukili_velcin.pdf",
+    lien_slides: "assets/memoires/slide_analyse_fractionnaire_loukili_velcin.pdf",
+    lien_pdf_label: { fr: "Lire le mémoire (PDF) →", en: "Read the thesis (PDF) →" },
+    lien_slides_label: { fr: "Slides de soutenance →", en: "Defense slides →" }
+  },
+   {
+    annee: "2025",
+    titre: { fr: "Chaînes de Markov et Méthodes de Monte Carlo par Chaines de Markov : quelques éléments de théorie et simulation du Modèle d'Ising", en: "Markov Chains and Monte Carlo Markov Chains Methods : Some Theoretical Aspects and Simulation of the Ising Model" },
+    description: {
+      fr: "Rapport issu de mon stage de recherche au sein de l'Institut Élie Cartan de Lorraine (IECL), ayant pour objectif d'introduire les chaînes de Markov et les méthodes MCMC, avec une application à la simulation du modèle d'Ising en 2D.",
+      en: "A report resulting from my research placement at the Élie Cartan Institute of Lorraine (IECL), aimed at introducing Markov chains and MCMC methods, with an application to the simulation of the 2D Ising model"
+    },
+    lien_pdf: "assets/memoires/markov_mcmc_velcin.pdf",
+    lien_slides: null,
     lien_pdf_label: { fr: "Lire le mémoire (PDF) →", en: "Read the thesis (PDF) →" },
     lien_slides_label: { fr: "Slides de soutenance →", en: "Defense slides →" }
   }
@@ -62,10 +76,10 @@ const i18n = {
   "nav.cv": { fr: "CV", en: "CV" },
   "nav.contact": { fr: "Contact", en: "Contact" },
 
-  "hero.eyebrow": { fr: "Portfolio universitaire — M1 Mathématiques", en: "University Portfolio — M1 Mathematics" },
+  "hero.eyebrow": { fr: "Portfolio universitaire — M2 Mathématiques", en: "University Portfolio — M2 Mathematics" },
   "hero.tagline": {
-    fr: "Étudiant en Master 1 de Mathématiques, spécialisé en probabilités et analyse stochastique. Mémoire de recherche sur le filtrage non linéaire.",
-    en: "M1 Mathematics student, focused on probability and stochastic analysis. Research thesis on nonlinear filtering."
+    fr: "Étudiant en Master 2 de Mathématiques, spécialisé en probabilités, calcul stochastique et statistiques appliquées à la finance et à l'assurance.",
+    en: "Second-year Master’s student in Mathematics, specialising in probability, stochastic calculus and statistics applied to finance and insurance."
   },
   "hero.link.projets": { fr: "Voir mes projets →", en: "See my projects →" },
   "hero.link.memoires": { fr: "Lire mes mémoires →", en: "Read my theses →" },
@@ -74,11 +88,11 @@ const i18n = {
   "traj.true": { fr: "trajectoire réelle", en: "true trajectory" },
   "traj.est": { fr: "estimation filtrée", en: "filtered estimate" },
 
-  "section.projets.eyebrow": { fr: "02 — Travaux", en: "02 — Work" },
+  "section.projets.eyebrow": { fr: "02 — Travaux", en: "02 — Works" },
   "section.projets.title": { fr: "Projets", en: "Projects" },
 
   "section.memoires.eyebrow": { fr: "03 — Recherche", en: "03 — Research" },
-  "section.memoires.title": { fr: "Mémoires", en: "Theses" },
+  "section.memoires.title": { fr: "Mémoires & Rapports", en: "Theses & Reports" },
 
   "section.cv.eyebrow": { fr: "04 — Parcours", en: "04 — Background" },
   "section.cv.title": { fr: "Curriculum Vitæ", en: "Curriculum Vitae" },
