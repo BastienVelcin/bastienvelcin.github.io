@@ -103,6 +103,13 @@ const experiences = [
     description: { fr: "Analyse de publications scientifiques traitant des chaînes de Markov et des Méthodes de Monte Carlo par Chaînes de Markov (MCMC). Rédaction d’un rapport de recherche structuré, synthétisant les résultats obtenus et la méthodologie.", en: "Analysis of scientific publications dealing with Markov chains and Markov Chain Monte Carlo (MCMC) methods. Preparation of a structured research report summarizing the results obtained and the methodology."},
   },
 ];
+
+const softskills = [
+   {
+      titre: { fr:"Programmation", en:"Programming"},
+      description : {fr: "Python, R, MATLAB et SQL", en: "Python, R, MATLAB and SQL"}
+   },
+];
 /* =====================================================================
    Dictionnaire de traduction des textes statiques
 ===================================================================== */
@@ -132,6 +139,7 @@ const i18n = {
   "section.memoires.title": { fr: "Mémoires & Rapports", en: "Theses & Reports" },
    
   "section.diplomes.title": { fr: "Formations & Diplômes", en: "Training & Qualifications" },
+   "section.experiences.title": { fr: "Expériences professionelles", en: "Professional experiences" },
 
   "section.cv.eyebrow": { fr: "04 — Parcours", en: "04 — Background" },
   "section.cv.title": { fr: "Curriculum Vitæ", en: "Curriculum Vitae" },
@@ -224,6 +232,15 @@ function renderExperiences() {
   `).join("");
 }
 
+function renderSoftskills() {
+  const list = document.getElementById("experiences-list");
+  list.innerHTML = experiences.map(s => `
+     <ul class="cv-highlights">
+          <li><strong data-i18n="cv.h1.label">${s.titre[currentLang]}</strong><span data-i18n="cv.h1.value">${s.description[currentLang]}</span></li>
+      </ul>
+  `).join("");
+}
+
 /* ===================================================================
    Langue : application au DOM + persistance
 =================================================================== */
@@ -250,6 +267,7 @@ function setLang(lang) {
   renderMemoires();
    renderDiplomes();
    renderExperiences();
+   renderSoftskills();
 }
 
 function setupLangSwitch() {
@@ -326,6 +344,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderMemoires();
    renderDiplomes();
    renderExperiences();
+   renderSoftskills();
   setupLangSwitch();
   setupScrollObservers();
   setupMobileMenu();
