@@ -85,7 +85,7 @@ const diplomes = [
     titre: { fr: "Baccalauréat Général (Mention : Très bien)", en: "General Baccalaureate (Honours: Highest Honours)"},
     universite: { fr: "Lycée Antoine de Saint-Exupéry - Fameck", en: "Antoine de Saint-Exupéry High School - Fameck"},
     description: { fr: "Spécialités : Mathématiques, Numériques et Sciences Informatiques, Physique-Chimie.", en: "Specializations: Mathematics, Digital Sciences and Computer Science, Physics and Chemistry"},
-  },
+  }
 ];
 
 /* =====================================================================
@@ -187,9 +187,9 @@ function renderDiplomes() {
     <div class="memoire-item reveal in">
       <p class="year">${d.annee}</p>
       <div>
-        <h3>${m.titre[currentLang]}</h3>
-        <h4>${m.universite[currentLang]}</h4>
-        <p>${m.description[currentLang]}</p>
+        <h3>${d.titre[currentLang]}</h3>
+        <h4>${d.universite[currentLang]}</h4>
+        <p>${d.description[currentLang]}</p>
       </div>
     </div>
   `).join("");
