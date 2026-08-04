@@ -53,22 +53,23 @@ const memoires = [
 
 const diplomes = [
   {
-    annee: "2026",
-    titre: "Calcul stochastique appliqué à quelques problèmes de filtrage non-linéaire",
-    universite: "Mémoire de Master 1 portant sur une introduction aux outils de calcul stochastique en vue d'aborder la théorie du filtrage non linéaire (équation de Zakai, filtre de Benes, ...) et leur application au suivi de trajectoires.",
-    description: "assets/memoires/memoire_filtrage_velcin.pdf",
+    annee: "2025-2026",
+    titre: "Master 1 - Mathématiques & Applications",
+    universite: "Université de Lorraine - Site de Metz",
+    description: "Perfectionnement de notions de mathématiques appliquées : Probabilités, Statistiques, Optimisation, Algorithmie, Réseaux de neurones, Analyse de données, Modélisation.",
+  },
+   
+   {
+    annee: "2022-2025",
+    titre: "Licence - Mathématiques (Mention : Très bien)",
+    universite: "Université de Lorraine - Site de Metz",
+    description: "Formation approfondie en mathématiques fondamentales et appliquées : analyse, algèbre, algèbre linéaire et bilinéaire, probabilités, statistiques, analyse numérique, simulation, calcul différentiel.",
   },
    {
-    annee: "2026",
-    titre: "Calcul stochastique appliqué à quelques problèmes de filtrage non-linéaire",
-    universite: "Mémoire de Master 1 portant sur une introduction aux outils de calcul stochastique en vue d'aborder la théorie du filtrage non linéaire (équation de Zakai, filtre de Benes, ...) et leur application au suivi de trajectoires.",
-    description: "assets/memoires/memoire_filtrage_velcin.pdf",
-  },
-   {
-    annee: "2026",
-    titre: "Calcul stochastique appliqué à quelques problèmes de filtrage non-linéaire",
-    universite: "Mémoire de Master 1 portant sur une introduction aux outils de calcul stochastique en vue d'aborder la théorie du filtrage non linéaire (équation de Zakai, filtre de Benes, ...) et leur application au suivi de trajectoires.",
-    description: "assets/memoires/memoire_filtrage_velcin.pdf",
+    annee: "2022",
+    titre: "Baccalauréat Général (Mention : Très bien)",
+    universite: "Lycée Antoine de Saint-Exupéry - Fameck",
+    description: "Spécialités : Mathématiques, Numériques et Sciences Informatiques, Physique-Chimie",
   }
 ];
 
