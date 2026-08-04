@@ -68,7 +68,7 @@ main.content {
   max-width: calc(var(--content-max) + 12vw);
 }
 
-.sidebar {
+.sidebar:not(#ss1) {
   position: fixed;
   top: 0;
   right: 0;
