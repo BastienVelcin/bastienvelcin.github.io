@@ -166,6 +166,21 @@ main.content {
 }
 .lang-switch:hover { border-color: var(--raspberry); }
 
+.lang-switch.mobile-float { display: none; }
+
+@media (max-width: 900px) {
+  .lang-switch.mobile-float {
+    display: flex;
+    position: fixed;
+    bottom: 1.2rem;
+    right: 1.2rem;
+    width: 92px;
+    z-index: 100;
+    background: var(--paper);
+    box-shadow: 0 4px 14px rgba(28, 35, 51, 0.18);
+  }
+}
+
 .lang-switch .lang-sep { display: none; }
 
 .lang-switch [data-lang-btn] {
