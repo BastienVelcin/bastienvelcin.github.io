@@ -137,8 +137,8 @@ const i18n = {
 
   "hero.eyebrow": { fr: "Portfolio universitaire — M2 Mathématiques", en: "University Portfolio — M2 Mathematics" },
   "hero.tagline": {
-    fr: "Étudiant en Master 2 de Mathématiques, spécialisé en probabilités, calcul stochastique et statistiques appliquées à la finance et à l'assurance.",
-    en: "Second-year Master’s student in Mathematics, specialising in probability, stochastic calculus and statistics applied to finance and insurance."
+    fr: "Étudiant en master de mathématiques appliquées, spécialisé en calcul stochastique, probabilités, apprentissage statistique et finance quantitative.",
+    en: "Applied Mathematics Master's student with a focus on stochastic calculus, probability, statistical learning and quantitative finance."
   },
   "hero.link.projets": { fr: "Voir mes projets →", en: "See my projects →" },
   "hero.link.memoires": { fr: "Lire mes mémoires →", en: "Read my theses →" },
