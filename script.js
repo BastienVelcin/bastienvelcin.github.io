@@ -258,7 +258,7 @@ function renderSoftskills() {
 function renderCv() {
   const list = document.getElementById("cv-button");
   list.innerHTML = cvlist.map(c => `
-      <a class="btn" href=${c.lien_pdf[currentLang]} download data-i18n="cv.button">${c.texte[currentLang]}</a>
+      <a class="btn" href=${c.lien_pdf[currentLang]} download data-i18n="cv.button" target="\_blank">${c.texte[currentLang]}</a>
   `).join("");
 }
 
