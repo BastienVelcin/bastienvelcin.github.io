@@ -393,7 +393,6 @@ h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: 2rem; }
 
 .cv-highlights {
   margin-top: 1.8rem;
-  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1.2rem;
   list-style: none;
