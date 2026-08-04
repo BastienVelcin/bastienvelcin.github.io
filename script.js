@@ -54,7 +54,7 @@ const memoires = [
   },
    {
     annee: "2025",
-    titre: { fr: "Chaînes de Markov et Méthodes de Monte Carlo par Chaines de Markov : quelques éléments de théorie et simulation du Modèle d'Ising", en: "Markov Chains and Monte Carlo Markov Chains Methods : Some Theoretical Aspects and Simulation of the Ising Model" },
+    titre: { fr: "Chaînes de Markov et Méthodes de Monte Carlo par Chaines de Markov : quelques éléments de théorie et simulation du Modèle d'Ising", en: "Markov Chains and Markov Chains Monte Carlo  Methods : Some Theoretical Aspects and Simulation of the Ising Model" },
     description: {
       fr: "Rapport issu de mon stage de recherche au sein de l'Institut Élie Cartan de Lorraine (IECL), ayant pour objectif d'introduire les chaînes de Markov et les méthodes MCMC, avec une application à la simulation du modèle d'Ising en 2D.",
       en: "A report resulting from my research placement at the Élie Cartan Institute of Lorraine (IECL), aimed at introducing Markov chains and MCMC methods, with an application to the simulation of the 2D Ising model"
@@ -88,6 +88,21 @@ const diplomes = [
   }
 ];
 
+const experiences = [
+     {
+    annee: "2024-2026",
+    titre: { fr: "Tuteur en Mathématiques", en: "Tutor in Mathematics"},
+    lieu: { fr: "Université de Lorraine - Site de Metz", en: "University of Lorraine – Metz Campus"},
+    description: { fr: "Organisation et conduite de séances pédagogiques de tutorat pour les L1 Mathématiques et L1 Mathématiques pour le Professorat des Écoles (PPPE) en logique, analyse, algèbre, et algèbre linéaire.", en: "Organizing and conducting tutorial sessions in logic, analysis, algebra, and linear algebra for first-year Mathematics students and those in the Mathematics for Primary School Teaching (PPPE) track."},
+  },
+
+  {
+    annee: "2024-2025",
+    titre: { fr: "Stage de recherche en Mathématiques", en: "Mathematics Research Internship"},
+    lieu: { fr: "Institut Élie Cartan de Lorraine (IECL)", en: "Élie Cartan Institute of Lorraine (IECL)"},
+    description: { fr: "Analyse de publications scientifiques traitant des chaînes de Markov et des Méthodes de Monte Carlo par Chaînes de Markov (MCMC). Rédaction d’un rapport de recherche structuré, synthétisant les résultats obtenus et la méthodologie.", en: "Analysis of scientific publications dealing with Markov chains and Markov Chain Monte Carlo (MCMC) methods. Preparation of a structured research report summarizing the results obtained and the methodology."},
+  },
+];
 /* =====================================================================
    Dictionnaire de traduction des textes statiques
 ===================================================================== */
@@ -195,6 +210,20 @@ function renderDiplomes() {
   `).join("");
 }
 
+function renderExperiences() {
+  const list = document.getElementById("experiences-list");
+  list.innerHTML = experiences.map(e => `
+    <div class="memoire-item reveal in">
+      <p class="year">${e.annee}</p>
+      <div>
+        <h3>${e.titre[currentLang]}</h3>
+        <h4>${e.lieu[currentLang]}</h4>
+        <p>${e.description[currentLang]}</p>
+      </div>
+    </div>
+  `).join("");
+}
+
 /* ===================================================================
    Langue : application au DOM + persistance
 =================================================================== */
@@ -295,6 +324,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProjets();
   renderMemoires();
    renderDiplomes();
+   renderExperiences();
   setupLangSwitch();
   setupScrollObservers();
   setupMobileMenu();
