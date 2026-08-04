@@ -172,7 +172,7 @@ const i18n = {
   "cv.h3.value": { fr: "LaTeX, Python, R", en: "LaTeX, Python, R" },
 
   "section.contact.eyebrow": { fr: "05 — Contact", en: "05 — Contact" },
-  "section.contact.title": { fr: "Me contacter", en: "Get in touch" },
+  "section.contact.title": { fr: "Contactez-moi", en: "Get in touch" },
 
   "ui.menu": { fr: "Menu", en: "Menu" },
 
