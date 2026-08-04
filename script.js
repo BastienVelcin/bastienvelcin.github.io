@@ -66,6 +66,28 @@ const memoires = [
   }
 ];
 
+const diplomes = [
+  {
+    annee: "2025-2026",
+    titre: { fr: "Master 1 - Mathématiques & Applications", en: "Master 1 - Mathematics & Applications"},
+    universite: { fr: "Université de Lorraine - Site de Metz", en: "University of Lorraine – Metz Campus"},
+    description: { fr: "Perfectionnement de notions de mathématiques appliquées : Probabilités, Statistiques, Optimisation, Algorithmie, Réseaux de neurones, Analyse de données, Modélisation.", en: "In-depth study of applied mathematics concepts: Probability, Statistics, Optimisation, Algorithms, Neural Networks, Data Analysis, Modeling."},
+  },
+
+  {
+    annee: "2022-2025",
+    titre: { fr: "Licence - Mathématiques (Mention : Très bien)", en: "Bachelor's degree – Mathematics (Honours: Highest Honours)"},
+    universite: { fr: "Université de Lorraine - Site de Metz", en: "University of Lorraine – Metz Campus"},
+    description: { fr: "Formation approfondie en mathématiques fondamentales et appliquées : analyse, algèbre, algèbre linéaire et bilinéaire, probabilités, statistiques, analyse numérique, simulation, calcul différentiel.", en: "Solid training in both fundamental and applied mathematics : analysis, algebra, linear and bilinear algebra, probability theory and statistics, numerical analysis, simulation, differential calculus."},
+  },
+  {
+    annee: "2022",
+    titre: { fr: "Baccalauréat Général (Mention : Très bien)", en: "General Baccalaureate (Honours: Highest Honours)"},
+    universite: { fr: "Lycée Antoine de Saint-Exupéry - Fameck", en: "Antoine de Saint-Exupéry High School - Fameck"},
+    description: { fr: "Spécialités : Mathématiques, Numériques et Sciences Informatiques, Physique-Chimie.", en: "Specializations: Mathematics, Digital Sciences and Computer Science, Physics and Chemistry"},
+  },
+];
+
 /* =====================================================================
    Dictionnaire de traduction des textes statiques
 ===================================================================== */
@@ -93,6 +115,8 @@ const i18n = {
 
   "section.memoires.eyebrow": { fr: "03 — Recherche", en: "03 — Research" },
   "section.memoires.title": { fr: "Mémoires & Rapports", en: "Theses & Reports" },
+   
+  "section.diplomes.title": { fr: "Formations & Diplômes", en: "Training & Qualifications" },
 
   "section.cv.eyebrow": { fr: "04 — Parcours", en: "04 — Background" },
   "section.cv.title": { fr: "Curriculum Vitæ", en: "Curriculum Vitae" },
@@ -152,6 +176,20 @@ function renderMemoires() {
           ${m.lien_pdf ? `<a href="${m.lien_pdf}" target="_blank" rel="noopener">${m.lien_pdf_label[currentLang]}</a>` : ""}
           ${m.lien_slides ? `<a href="${m.lien_slides}" target="_blank" rel="noopener">${m.lien_slides_label[currentLang]}</a>` : ""}
         </div>
+      </div>
+    </div>
+  `).join("");
+}
+
+function renderDiplomes() {
+  const list = document.getElementById("diplomes-list");
+  list.innerHTML = diplomes.map(d => `
+    <div class="memoire-item reveal in">
+      <p class="year">${d.annee}</p>
+      <div>
+        <h3>${m.titre[currentLang]}</h3>
+        <h4>${m.universite[currentLang]}</h4>
+        <p>${m.description[currentLang]}</p>
       </div>
     </div>
   `).join("");
@@ -255,6 +293,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateLangButtons();
   renderProjets();
   renderMemoires();
+   renderDiplomes():
   setupLangSwitch();
   setupScrollObservers();
   setupMobileMenu();
