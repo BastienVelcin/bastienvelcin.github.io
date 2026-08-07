@@ -204,7 +204,7 @@ let currentLang = localStorage.getItem(LANG_KEY) || "fr";
 function renderProjets() {
   const grid = document.getElementById("projets-grid");
   grid.innerHTML = projets.map(p => `
-    <article class="card reveal in">
+    <div class="card reveal in">
       <p class="tag">${p.tag[currentLang]}</p>
       <h3>${p.titre[currentLang]}</h3>
       <p>${p.description[currentLang]}</p>
@@ -213,7 +213,7 @@ function renderProjets() {
         ${p.lien_code ? `<a href="${p.lien_code}" target="_blank" rel="noopener">${currentLang === "fr" ? "Code →" : "Code →"}</a>` : ""}
         ${p.lien_demo ? `<a href="${p.lien_demo}" target="_blank" rel="noopener">${currentLang === "fr" ? "Démo →" : "Demo →"}</a>` : ""}
       </div>
-    </article>
+    </div>
   `).join("");
 }
 
