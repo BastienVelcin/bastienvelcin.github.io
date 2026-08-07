@@ -13,7 +13,8 @@ const projets = [
       en: "Creation of a Python library for stochastic calculus and stochastic modeling. The project is currently under development."
     },
     lien_code: "https://github.com/BastienVelcin/PyStochastic",
-    lien_demo: null
+    lien_demo: null,
+    lien_page: "/projets/pystochastic.html"
   },
   {
     tag: { fr: "MATLAB · Modélisation", en: "MATLAB · Modeling" },
@@ -23,7 +24,8 @@ const projets = [
       en: "Application of the finite element method to a rectangular domain with an elliptical cutout. Project co-authored with MULLER Célia."
     },
     lien_code: "https://github.com/BastienVelcin/FiniteElementMethod",
-    lien_demo: null
+    lien_demo: null,
+    lien_page: "#"
   },
 ];
 
@@ -202,6 +204,7 @@ let currentLang = localStorage.getItem(LANG_KEY) || "fr";
 function renderProjets() {
   const grid = document.getElementById("projets-grid");
   grid.innerHTML = projets.map(p => `
+   <a href=${p.lien_page}>
     <article class="card reveal in">
       <p class="tag">${p.tag[currentLang]}</p>
       <h3>${p.titre[currentLang]}</h3>
@@ -211,6 +214,7 @@ function renderProjets() {
         ${p.lien_demo ? `<a href="${p.lien_demo}" target="_blank" rel="noopener">${currentLang === "fr" ? "Démo →" : "Demo →"}</a>` : ""}
       </div>
     </article>
+   </a>
   `).join("");
 }
 
