@@ -168,7 +168,6 @@ main.content {
 
 .lang-switch.mobile-float { display: none; }
 
-@media (max-width: 900px) {
   .lang-switch.mobile-float {
     display: flex;
     position: fixed;
@@ -179,7 +178,6 @@ main.content {
     background: var(--paper);
     box-shadow: 0 4px 14px rgba(28, 35, 51, 0.18);
   }
-}
 
 .lang-switch .lang-sep { display: none; }
 
