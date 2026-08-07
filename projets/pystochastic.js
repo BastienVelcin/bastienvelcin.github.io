@@ -155,7 +155,7 @@ const processus = [
   },
   {
     title:{fr:"Processus de Poisson", en:"Poisson processes"},
-    path:"processes/OrnsteinUhlenbeck.py",
+    path:"processes/Poisson.py",
     desc:{
       fr: "Compte des événements arrivant aléatoirement dans le temps, à taux constant.",
       en: "Counts events arriving randomly over time, at a constant rate."
@@ -164,7 +164,7 @@ const processus = [
   },
   {
     title: {fr: "Modèle de Vasicek", en: "Masicek model"},
-    path: "processes/vasicek.py",
+    path: "processes/Vasicek.py",
     desc: {
       fr: "Un Ornstein-Uhlenbeck appliqué aux taux d'intérêt, qui peut prendre des valeurs négatives.",
       en: "An Ornstein-Uhlenbeck process applied to interest rates, which can take negative values."
