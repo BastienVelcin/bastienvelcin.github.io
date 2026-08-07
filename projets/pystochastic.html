@@ -109,7 +109,7 @@
 <span class="kw">       return</span> 2
 
 <span class="cm"># Solving dX_t = drift(X_t, t)dt + diffusion(X_t,t)dW_t, </span>
-X = EulerMaruyama(mu=<span class="st">drift</span>, sigma=<span class="st">diffusion</span>, x_0=<span class="st">0</span>,t_0=<span class="st">0</span>,t_n=<span class="st">1</span>,n_steps=<span class="st">1000</span>,n_simulations=<span class="st">20</span>)
+X = EulerMaruyama(mu=<span class="st">drift</span>, sigma=<span class="st">diffusion</span>, x_0=<span class="st">0</span>, t_0=<span class="st">0</span>, t_n=<span class="st">1</span>, n_steps=<span class="st">1000</span>, n_simulations=<span class="st">20</span>)
 X.<span class="kw">solve</span>(plot=<span class="st">True</span>)
 </code></pre>
 
