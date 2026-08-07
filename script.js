@@ -25,7 +25,7 @@ const projets = [
     },
     lien_code: "https://github.com/BastienVelcin/FiniteElementMethod",
     lien_demo: null,
-    lien_page: "#"
+    lien_page: null,
   },
 ];
 
@@ -209,7 +209,7 @@ function renderProjets() {
       <h3>${p.titre[currentLang]}</h3>
       <p>${p.description[currentLang]}</p>
       <div class="card-links">
-         ${p.lien_page ? `<a href="${p.lien_page}" target="_blank" rel="noopener">${currentLang === "fr" ? "Page du projet →" : "Project page →"}</a>` : ""}
+         ${p.lien_page ? `<a href="${p.lien_page}" rel="noopener">${currentLang === "fr" ? "Page du projet →" : "Project page →"}</a>` : ""}
         ${p.lien_code ? `<a href="${p.lien_code}" target="_blank" rel="noopener">${currentLang === "fr" ? "Code →" : "Code →"}</a>` : ""}
         ${p.lien_demo ? `<a href="${p.lien_demo}" target="_blank" rel="noopener">${currentLang === "fr" ? "Démo →" : "Demo →"}</a>` : ""}
       </div>
