@@ -58,7 +58,7 @@
 
       <ul class="stat-row">
         <li><strong>10</strong><span data-i18n="stat.modules">modules</span></li>
-        <li><strong>8</strong><span data-i18n="stat.processus">processus implémentés</span></li>
+        <li><strong>7</strong><span data-i18n="stat.processus">processus implémentés</span></li>
         <li><strong>WIP</strong><span data-i18n="stat.statut">statut du dépôt</span></li>
       </ul>
     </section>
@@ -71,137 +71,21 @@
         Deux modules de base pour générer des échantillons aléatoires, utilisés en interne par les
         processus stochastiques et directement réutilisables ailleurs.
       </p>
-
-      <div class="modules-grid">
-        <article class="module-card">
-          <svg class="module-chart" viewBox="0 0 220 64"><path d="M4,58 C40,58 55,6 78,6 C101,6 116,58 216,58" class="c-raspberry"></path></svg>
-          <h3 class="module-name">CRandom</h3>
-          <p class="module-path">pyrandom/crandom.py</p>
-          <p class="module-desc" data-i18n="crandom.desc">
-            Génère des échantillons de lois à densité, des plus courantes (uniforme, normale,
-            exponentielle) aux plus spécifiques (Weibull, échet, Fisher…).
-          </p>
-        </article>
-
-        <article class="module-card">
-          <svg class="module-chart" viewBox="0 0 220 64">
-            <line x1="14" y1="58" x2="14" y2="40" class="c-steel" stroke-width="8"></line>
-            <line x1="50" y1="58" x2="50" y2="18" class="c-steel" stroke-width="8"></line>
-            <line x1="86" y1="58" x2="86" y2="52" class="c-steel" stroke-width="8"></line>
-            <line x1="122" y1="58" x2="122" y2="10" class="c-steel" stroke-width="8"></line>
-            <line x1="158" y1="58" x2="158" y2="30" class="c-steel" stroke-width="8"></line>
-            <line x1="194" y1="58" x2="194" y2="46" class="c-steel" stroke-width="8"></line>
-          </svg>
-          <h3 class="module-name">DRandom</h3>
-          <p class="module-path">pyrandom/drandom.py</p>
-          <p class="module-desc" data-i18n="drandom.desc">
-            Génère des échantillons de lois discrètes, pour tout ce qui relève des processus à sauts
-            ou des variables de comptage.
-          </p>
-        </article>
-      </div>
+      <div class="modules-grid" id="modules-grid"><!-- injecté par script.js --></div>
     </section>
 
     <!-- ============ PROCESSUS STOCHASTIQUES ============ -->
-    <section id="processus" class="project-section reveal">
+    <section id="processus" class="processus-section reveal">
       <p class="eyebrow" data-i18n="section.processus.eyebrow">03 — Processus</p>
       <h2 data-i18n="section.processus.title">Processus stochastiques</h2>
-      <p data-i18n="processus.intro">
-        Huit processus classiques, chacun dans son propre module, avec une interface commune de
-        simulation et de tracé.
-      </p>
-
-      <div class="modules-grid">
-
-        <article class="module-card">
-          <svg class="module-chart" viewBox="0 0 220 64"><path id="chart-sbrownian" class="c-raspberry"></path></svg>
-          <h3 class="module-name" data-i18n="sbrownian.title">Mouvement Brownien Standard</h3>
-          <p class="module-path" data-i18n="sbrownian.path" >processes/brownian.py</p>
-          <p class="module-desc" data-i18n="sbrownian.desc">Mouvement brownien standard (processus de Wiener) : la brique de base de tout le calcul stochastique dans la bibliothèque.</p>
-        </article>
-
-        <article class="module-card">
-          <svg class="module-chart" viewBox="0 0 220 64"><path id="chart-gbrownian" class="c-raspberry"></path></svg>
-          <h3 class="module-name">GBrownian</h3>
-          <p class="module-path">processes/GeometricBrownianMotion.py</p>
-          <p class="module-desc" data-i18n="gbrownian.desc">Mouvement brownien géométrique : trajectoires toujours positives, à la base des modèles de type Black-Scholes.</p>
-        </article>
-
-        <article class="module-card">
-          <svg class="module-chart" viewBox="0 0 220 64"><path id="chart-ornuhl" class="c-steel"></path></svg>
-          <h3 class="module-name">OrnUhl</h3>
-          <p class="module-path">processes/ornuhl.py</p>
-          <p class="module-desc" data-i18n="ornuhl.desc">Processus d'Ornstein-Uhlenbeck : retour à la moyenne, utile pour modéliser des quantités qui oscillent autour d'un niveau d'équilibre.</p>
-        </article>
-
-        <article class="module-card">
-          <svg class="module-chart" viewBox="0 0 220 64"><path id="chart-poisson" class="c-raspberry"></path></svg>
-          <h3 class="module-name">Poisson</h3>
-          <p class="module-path">processes/poisson.py</p>
-          <p class="module-desc" data-i18n="poisson.desc">Processus de Poisson : compte des événements arrivant aléatoirement dans le temps, à taux constant.</p>
-        </article>
-
-        <article class="module-card">
-          <svg class="module-chart" viewBox="0 0 220 64"><path id="chart-vasicek" class="c-steel"></path></svg>
-          <h3 class="module-name">Vasicek</h3>
-          <p class="module-path">processes/vasicek.py</p>
-          <p class="module-desc" data-i18n="vasicek.desc">Modèle de Vasicek : un Ornstein-Uhlenbeck appliqué aux taux d'intérêt, qui peut prendre des valeurs négatives.</p>
-        </article>
-
-        <article class="module-card">
-          <svg class="module-chart" viewBox="0 0 220 64"><path id="chart-cir" class="c-raspberry"></path></svg>
-          <h3 class="module-name">CIR</h3>
-          <p class="module-path">processes/cir.py</p>
-          <p class="module-desc" data-i18n="cir.desc">Modèle Cox-Ingersoll-Ross : variante du Vasicek dont la volatilité dépend du niveau, ce qui garantit des trajectoires positives.</p>
-        </article>
-
-        <article class="module-card">
-          <svg class="lattice-chart" viewBox="0 0 220 64">
-            <line x1="10" y1="32" x2="60" y2="10"></line>
-            <line x1="10" y1="32" x2="60" y2="54"></line>
-            <line x1="60" y1="10" x2="110" y2="4"></line>
-            <line x1="60" y1="10" x2="110" y2="26"></line>
-            <line x1="60" y1="54" x2="110" y2="26"></line>
-            <line x1="60" y1="54" x2="110" y2="58"></line>
-            <line x1="110" y1="4" x2="160" y2="2"></line>
-            <line x1="110" y1="4" x2="160" y2="18"></line>
-            <line x1="110" y1="26" x2="160" y2="18"></line>
-            <line x1="110" y1="26" x2="160" y2="36"></line>
-            <line x1="110" y1="58" x2="160" y2="36"></line>
-            <line x1="110" y1="58" x2="160" y2="60"></line>
-            <line x1="160" y1="2" x2="210" y2="2"></line>
-            <line x1="160" y1="18" x2="210" y2="18"></line>
-            <line x1="160" y1="36" x2="210" y2="36"></line>
-            <line x1="160" y1="60" x2="210" y2="60"></line>
-            <circle cx="10" cy="32" r="3"></circle>
-            <circle cx="60" cy="10" r="3"></circle><circle cx="60" cy="54" r="3"></circle>
-            <circle cx="110" cy="4" r="3"></circle><circle cx="110" cy="26" r="3"></circle><circle cx="110" cy="58" r="3"></circle>
-            <circle cx="160" cy="2" r="3"></circle><circle cx="160" cy="18" r="3"></circle><circle cx="160" cy="36" r="3"></circle><circle cx="160" cy="60" r="3"></circle>
-          </svg>
-          <h3 class="module-name">CRR</h3>
-          <p class="module-path">processes/crr.py</p>
-          <p class="module-desc" data-i18n="crr.desc">Modèle Cox-Ross-Rubinstein : approximation en arbre binomial recombinant, la version discrète du mouvement brownien géométrique.</p>
-        </article>
-
-        <article class="module-card">
-          <svg class="module-chart" viewBox="0 0 220 64">
-            <path id="chart-processdisp-1" class="c-steel-faint"></path>
-            <path id="chart-processdisp-2" class="c-steel-faint"></path>
-            <path id="chart-processdisp-3" class="c-steel-faint"></path>
-            <path id="chart-processdisp-main" class="c-raspberry"></path>
-          </svg>
-          <h3 class="module-name">ProcessDisp</h3>
-          <p class="module-path">processes/processdisp.py</p>
-          <p class="module-desc" data-i18n="processdisp.desc">Module de visualisation : trace plusieurs trajectoires simulées d'un même processus pour comparer leur dispersion.</p>
-        </article>
-
-      </div>
+      <p data-i18n="processus.intro" >Sept processus classiques, chacun dans son propre module, avec une interface commune de simulation et de tracé.</p>
+      <div class="modules-grid" id="processus-grid"><!-- injecté par script.js --></div>
     </section>
 
     <!-- ============ MONTE CARLO & EDS ============ -->
     <section id="monte-carlo-eds" class="project-section reveal">
       <p class="eyebrow" data-i18n="section.mc.eyebrow">04 — Simulation</p>
-      <h2 data-i18n="section.mc.title">Monte Carlo & équations différentielles stochastiques</h2>
+      <h2 data-i18n="section.mc.title">Monte Carlo & Équations Différentielles Stochastiques</h2>
       <p data-i18n="mc.p1">
         La simulation de Monte Carlo consiste à générer un grand nombre de trajectoires indépendantes
         d'un même processus pour estimer une quantité d'intérêt (prix, probabilité, espérance) par une
@@ -214,13 +98,20 @@
         dépend de l'état.
       </p>
 
-      <pre class="code-block"><code><span class="kw">om</span> processes.brownian <span class="kw">import</span> SBrownian
-<span class="kw">from</span> sde.eulermaruyama <span class="kw">import</span> EulerMaruyama
+      <pre class="code-block"><code><span class="kw">from</span> sde.eulermaruyama <span class="kw">import</span> EulerMaruyama
 
-<span class="cm"># Simulation d'un mouvement brownien avec un schéma d'Euler-Maruyama</span>
-process = SBrownian(sigma=<span class="st">0.2</span>)
-scheme  = EulerMaruyama(process, dt=<span class="st">0.01</span>, n_steps=<span class="st">1000</span>)
-trajectoires = scheme.simulate(n_paths=<span class="st">500</span>)</code></pre>
+<span class="cm"># Drift function </span>
+<span class="kw">def</span> drift(x,t):
+<span class="kw">       return</span> t*x
+
+<span class="cm"># Diffusion function, </span>
+<span class="kw">def</span> diffusion(x,t):
+<span class="kw">       return</span> 2
+
+<span class="cm"># Solving dX_t = drift(X_t, t)dt + diffusion(X_t,t)dW_t, </span>
+X = EulerMaruyama(mu=<span class="st">drift</span>, sigma=<span class="st">diffusion</span>, x_0=<span class="st">0</span>,t_0=<span class="st">0</span>,t_n=<span class="st">1</span>,n_steps=<span class="st">1000</span>,n_simulations=<span class="st">20</span>)
+X.<span class="kw">solve</span>(plot=<span class="st">True</span>)
+</code></pre>
 
       <div class="chart-row">
         <div class="chart-card">
@@ -356,8 +247,9 @@ trajectoires = scheme.simulate(n_paths=<span class="st">500</span>)</code></pre>
     </div>
 
     <div class="sidebar-foot">
-      <a href="https://github.com/BastienVelcin/PyStochastic" target="_blank" rel="noopener">GitHub</a>
-      <a href="../index.html#contact">Contact</a>
+      <a href="https://github.com/BastienVelcin" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/bastien-velcin" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:bastien.velcin9@etu.univ-lorraine.fr">Email</a>
     </div>
   </aside>
 

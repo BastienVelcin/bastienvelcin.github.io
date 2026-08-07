@@ -47,58 +47,19 @@ const i18n = {
     fr: "Deux modules de base pour générer des échantillons aléatoires, utilisés en interne par les processus stochastiques et directement réutilisables ailleurs.",
     en: "Two foundational modules for generating random samples, used internally by the stochastic processes and directly reusable elsewhere."
   },
-  "crandom.desc": {
-    fr: "Génère des échantillons de lois à densité, des plus courantes (uniforme, normale, exponentielle) aux plus spécifiques (Weibull, Fréchet, Fisher…).",
-    en: "Generates samples from continuous distributions, from common ones (uniform, normal, exponential) to more specific ones (Weibull, Fréchet, Fisher…)."
-  },
-  "drandom.desc": {
-    fr: "Génère des échantillons de lois discrètes, pour tout ce qui relève des processus à sauts ou des variables de comptage.",
-    en: "Generates samples from discrete distributions, for anything related to jump processes or counting variables."
-  },
+
+
 
   "section.processus.eyebrow": { fr: "03 — Processus", en: "03 — Processes" },
   "section.processus.title": { fr: "Processus stochastiques", en: "Stochastic processes" },
+
   "processus.intro": {
-    fr: "Huit processus classiques, chacun dans son propre module, avec une interface commune de simulation et de tracé (via ProcessDisp).",
-    en: "Eight classic processes, each in its own module, with a shared interface for simulation and plotting (via ProcessDisp)."
-  },
-   "sbrownian.title": { fr: "Mouvement Brownien Standard", en: "Standard Brownian Motion" },
-   "sbrownian.path": { fr: "processes/brownian.py", en: "processes/brownian.py" },
-  "sbrownian.desc": {
-    fr: "Mouvement brownien standard (processus de Wiener) : la brique de base de tout le calcul stochastique dans la bibliothèque.",
-    en: "Standard Brownian motion (Wiener process): the basic building block for all stochastic calculus in the library."
-  },
-  "gbrownian.desc": {
-    fr: "Mouvement brownien géométrique : trajectoires toujours positives, à la base des modèles de type Black-Scholes.",
-    en: "Geometric Brownian motion: always-positive trajectories, the basis of Black-Scholes-type models."
-  },
-  "ornuhl.desc": {
-    fr: "Processus d'Ornstein-Uhlenbeck : retour à la moyenne, utile pour modéliser des quantités qui oscillent autour d'un niveau d'équilibre.",
-    en: "Ornstein-Uhlenbeck process: mean-reverting, useful for modelling quantities that oscillate around an equilibrium level."
-  },
-  "poisson.desc": {
-    fr: "Processus de Poisson : compte des événements arrivant aléatoirement dans le temps, à taux constant.",
-    en: "Poisson process: counts events arriving randomly over time, at a constant rate."
-  },
-  "vasicek.desc": {
-    fr: "Modèle de Vasicek : un Ornstein-Uhlenbeck appliqué aux taux d'intérêt, qui peut prendre des valeurs négatives.",
-    en: "Vasicek model: an Ornstein-Uhlenbeck process applied to interest rates, which can take negative values."
-  },
-  "cir.desc": {
-    fr: "Modèle Cox-Ingersoll-Ross : variante du Vasicek dont la volatilité dépend du niveau, ce qui garantit des trajectoires positives.",
-    en: "Cox-Ingersoll-Ross model: a Vasicek variant whose volatility depends on the level, which keeps trajectories positive."
-  },
-  "crr.desc": {
-    fr: "Modèle Cox-Ross-Rubinstein : approximation en arbre binomial recombinant, la version discrète du mouvement brownien géométrique.",
-    en: "Cox-Ross-Rubinstein model: a recombining binomial tree approximation, the discrete counterpart of geometric Brownian motion."
-  },
-  "processdisp.desc": {
-    fr: "Module de visualisation : trace plusieurs trajectoires simulées d'un même processus pour comparer leur dispersion.",
-    en: "Visualization module: plots several simulated trajectories of the same process to compare their spread."
+    fr: "Sept processus classiques, chacun dans son propre module, avec une interface commune de simulation et de tracé.",
+    en: "Seven classic processes, each in its own module, with a shared interface for simulation and plotting."
   },
 
   "section.mc.eyebrow": { fr: "04 — Simulation", en: "04 — Simulation" },
-  "section.mc.title": { fr: "Monte Carlo & équations différentielles stochastiques", en: "Monte Carlo & stochastic differential equations" },
+  "section.mc.title": { fr: "Monte Carlo & Équations Différentielles Stochastiques", en: "Monte Carlo & Stochastic Differential Equations" },
   "mc.p1": {
     fr: "La simulation de Monte Carlo consiste à générer un grand nombre de trajectoires indépendantes d'un même processus pour estimer une quantité d'intérêt (prix, probabilité, espérance) par une moyenne empirique.",
     en: "Monte Carlo simulation generates a large number of independent trajectories of the same process to estimate a quantity of interest (price, probability, expectation) via an empirical average."
@@ -144,6 +105,94 @@ const i18n = {
   "perspectives.repo": { fr: "Dépôt GitHub →", en: "GitHub repository →" }
 };
 
+const random = [
+  {
+    title: {fr: "Aléatoire en temps continu",en:"Continuous-time Random"},
+    path: "pyrandom/crandom.py",
+    desc: {
+      fr: "Génère des échantillons de lois à densité, des plus courantes (uniforme, normale, exponentielle) aux plus spécifiques (Weibull, Fréchet, Fisher…).",
+      en: "Generates samples from continuous distributions, from common ones (uniform, normal, exponential) to more specific ones (Weibull, Fréchet, Fisher…)."
+    },
+    svg: "<path d=\'M4,58 C40,58 55,6 78,6 C101,6 116,58 216,58\' class=\'c-raspberry\'></path>"
+  },
+  {
+    title: {fr: "Aléatoire en temps discret",en:"Discrete-time Random"},
+    path: "pyrandom/drandom.py",
+    desc: {
+      fr: "Génère des échantillons de lois discrètes, pour tout ce qui relève des processus à sauts ou des variables de comptage.",
+      en: "Generates samples from discrete distributions, for anything related to jump processes or counting variables."
+    },
+    svg: "<line x1='14' y1='58' x2='14' y2='40' class='c-steel' stroke-width='8'></line><line x1='50' y1='58' x2='50' y2='18' class='c-steel' stroke-width='8'></line><line x1='86' y1='58' x2='86' y2='52' class='c-steel' stroke-width='8'></line><line x1='122' y1='58' x2='122' y2='10' class='c-steel' stroke-width='8'></line><line x1='158' y1='58' x2='158' y2='30' class='c-steel' stroke-width='8'></line><line x1='194' y1='58' x2='194' y2='46' class='c-steel' stroke-width='8'></line>"
+  },
+];
+const processus = [
+  {
+    title: { fr: "Mouvement Brownien Standard", en: "Standard Brownian Motion" },
+    path: "processes/brownian.py",
+    desc: {
+      fr: "La brique de base de tout le calcul stochastique dans la bibliothèque. Outil fondamental de représentation de l'aléatoire.",
+      en: "Standard Brownian motion (Wiener process): the basic building block for all stochastic calculus in the library. Fundamental tool for representing randomness."
+    },
+    chart: "chart-sbrownian",
+  },
+  {
+    title: {fr:"Mouvement Brownien Géométrique", en:"Geometric Brownian Motion"},
+    path: "processes/GeometricBrownianMotion.py",
+    desc: {
+      fr: "Trajectoires toujours positives, à la base des modèles de type Black-Scholes.",
+      en: "Always-positive trajectories, the basis of Black-Scholes-type models."
+    },
+    chart: "chart-gbrownian",
+  },
+  {
+    title: {fr:"Processus d'Ornstein-Uhlenbeck", en:"Ornstein-Uhlenbeck processes"},
+    path: "processes/OrnsteinUhlenbeck.py",
+    desc: {
+      fr: "Retour à la moyenne, utile pour modéliser des quantités qui oscillent autour d'un niveau d'équilibre.",
+      en: "Mean-reverting, useful for modelling quantities that oscillate around an equilibrium level."
+    },
+    chart:"chart-ornuhl",
+  },
+  {
+    title:{fr:"Processus de Poisson", en:"Poisson processes"},
+    path:"processes/OrnsteinUhlenbeck.py",
+    desc:{
+      fr: "Compte des événements arrivant aléatoirement dans le temps, à taux constant.",
+      en: "Counts events arriving randomly over time, at a constant rate."
+    },
+    chart:"chart-poisson",
+  },
+  {
+    title: {fr: "Modèle de Vasicek", en: "Masicek model"},
+    path: "processes/vasicek.py",
+    desc: {
+      fr: "Un Ornstein-Uhlenbeck appliqué aux taux d'intérêt, qui peut prendre des valeurs négatives.",
+      en: "An Ornstein-Uhlenbeck process applied to interest rates, which can take negative values."
+    },
+    chart: "chart-vasicek",
+  },
+  {
+    title: {fr: "Modèle de Cox-Ingersoll-Ross", en: "Cox-Ingersoll-Ross Model"},
+    path: "processes/cir.py",
+    desc: {
+      fr: "Variante du Vasicek dont la volatilité dépend du niveau, ce qui garantit des trajectoires positives.",
+      en: "A Vasicek variant whose volatility depends on the level, which keeps trajectories positive."
+    },
+    chart: "chart-cir",
+
+  },
+  {
+    title: {fr: "Modèle de Cox-Ross-Rubinstein", en: "Cox-Ross-Rubinstein Model"},
+    path: "processes/crr.py",
+    desc: {
+      fr: "Approximation en arbre binomial recombinant, la version discrète du mouvement brownien géométrique.",
+      en: "A recombining binomial tree approximation, the discrete counterpart of geometric Brownian motion."
+    },
+    chart: "chart-crr",
+    chartType: "lattice"
+  },
+];
+
 const LANG_KEY = "portfolio-lang";
 let currentLang = localStorage.getItem(LANG_KEY) || "fr";
 
@@ -166,6 +215,9 @@ function setLang(lang) {
   document.documentElement.lang = lang;
   applyStaticTranslations();
   updateLangButtons();
+  renderRandom();
+  renderProcessus();
+  renderModuleCharts();
 }
 
 function setupLangSwitch() {
@@ -266,6 +318,34 @@ function setPath(id, d) {
   if (el) el.setAttribute("d", d);
 }
 
+function latticeSvg() {
+  const levels = [
+    [{ x: 10, y: 32 }],
+    [{ x: 60, y: 10 }, { x: 60, y: 54 }],
+    [{ x: 110, y: 4 }, { x: 110, y: 26 }, { x: 110, y: 58 }],
+    [{ x: 160, y: 2 }, { x: 160, y: 18 }, { x: 160, y: 36 }, { x: 160, y: 60 }],
+    [{ x: 210, y: 2 }, { x: 210, y: 18 }, { x: 210, y: 36 }, { x: 210, y: 60 }]
+  ];
+
+  const lines = levels.slice(0, -1).flatMap((level, levelIndex) =>
+    level.flatMap((node, nodeIndex) => {
+      const nextLevel = levels[levelIndex + 1];
+      const nextNodes = levelIndex === 0
+        ? nextLevel
+        : [nextLevel[nodeIndex], nextLevel[nodeIndex + 1]].filter(Boolean);
+      return nextNodes.map(next =>
+        `<line x1="${node.x}" y1="${node.y}" x2="${next.x}" y2="${next.y}"></line>`
+      );
+    })
+  ).join("");
+
+  const circles = levels.slice(0, -1).flat().map(node =>
+    `<circle cx="${node.x}" cy="${node.y}" r="3"></circle>`
+  ).join("");
+
+  return lines + circles;
+}
+
 function renderModuleCharts() {
   const W = 220, H = 64, WIDE_W = 640, WIDE_H = 160;
 
@@ -336,12 +416,49 @@ function renderModuleCharts() {
 }
 
 /* ===================================================================
+   3) Génération des cards des processus
+=================================================================== */
+function renderRandom() {
+  const grid = document.getElementById("modules-grid");
+  grid.innerHTML = random.map(r => `
+    <article class="module-card">
+          <svg class="module-chart" viewBox="0 0 220 64">${r.svg}</svg>
+          <h3 class="module-name">${r.title[currentLang]}</h3>
+          <p class="module-path">${r.path}</p>
+          <p class="module-desc">${r.desc[currentLang]}</p>
+    </article>
+  `).join("");
+}
+
+
+function renderProcessus() {
+  const grid = document.getElementById("processus-grid");
+  grid.innerHTML = processus.map(p => `
+    <article class="module-card">
+      <svg class="${p.chartType === "lattice" ? "lattice-chart" : "module-chart"}" viewBox="0 0 220 64">
+        ${p.chartType === "lattice" ? latticeSvg() : `<path id="${p.chart}" class="c-raspberry"></path>`}
+      </svg>
+      <h3 class="module-name">${p.title[currentLang]}</h3>
+      <p class="module-path">${p.path}</p>
+      <p class="module-desc">${p.desc[currentLang]}</p>
+    </article>
+  `).join("");
+}
+
+
+
+
+
+/* ===================================================================
    Init
 =================================================================== */
 document.addEventListener("DOMContentLoaded", () => {
   document.documentElement.lang = currentLang;
   applyStaticTranslations();
   updateLangButtons();
+  renderModuleCharts();
+  renderRandom();
+  renderProcessus();
   setupLangSwitch();
   renderModuleCharts();
 });
