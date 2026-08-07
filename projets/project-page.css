@@ -168,35 +168,10 @@
    flux normal, et on permet le scroll si jamais ça dépasse. */
 .sidebar { overflow-y: auto; padding-top: 4.5rem; padding-bottom: 2rem; justify-content: flex-start; }
 .sidebar .lang-switch {
+  position: relative;
+  bottom: auto; left: auto; right: auto;
   margin: 1.8rem 0 0;
-  bottom: 6.2rem;
-  left: 2.2rem;
-  right: 2.2rem;
-  background: none;
-  border: 1px solid var(--paper-line);
-  border-radius: var(--radius);
-  padding: 0.4rem 0.7rem;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.06em;
-  color: var(--ink-faint);
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  gap: 0.35rem;
-  transition: border-color 0.2s ease;
 }
-.lang-switch:hover { border-color: var(--raspberry); }
-.lang-switch .lang-sep { color: var(--ink-faint); }
-.lang-switch [data-lang-btn] { transition: color 0.2s ease; }
-.lang-switch[data-current="fr"] [data-lang-btn="fr"],
-.lang-switch[data-current="en"] [data-lang-btn="en"] {
-  color: var(--raspberry);
-  font-weight: 600;
-}
-
-}
-
 .sidebar .sidebar-foot {
   position: relative;
   bottom: auto; left: auto; right: auto;
