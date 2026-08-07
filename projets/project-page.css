@@ -279,16 +279,16 @@ body.js-ready .reveal.in { opacity: 1; transform: translateY(0); }
   margin-top: 1.8rem;
 }
 
-.module-card, .figure-card,.chart-card {
+.module-card {
   border: 1px solid var(--paper-line);
   border-radius: var(--radius);
   padding: 1.3rem 1.3rem 1.15rem;
   background: rgba(255,255,255,0.35);
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
-.module-card:hover .figure-card:hover .chart-card:hover { border-color: var(--raspberry); transform: translateY(-2px); }
+.module-card:hover { border-color: var(--raspberry); transform: translateY(-2px); }
 
-.module-chart .figure-card,.chart-card { width: 100%; height: 64px; display: block; margin-bottom: 0.9rem; }
+.module-chart { width: 100%; height: 64px; display: block; margin-bottom: 0.9rem; }
 .module-chart {
   fill: none;
   stroke-width: 1.5;
@@ -332,6 +332,8 @@ body.js-ready .reveal.in { opacity: 1; transform: translateY(0); }
   padding: 1.3rem 1.4rem 1.2rem;
   background: rgba(255,255,255,0.35);
 }
+.chart-card:hover { border-color: var(--raspberry); transform: translateY(-2px); }
+
 .chart-card h4 {
   font-family: var(--font-mono);
   font-size: 0.7rem;
