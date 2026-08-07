@@ -62,6 +62,8 @@ const i18n = {
     fr: "Huit processus classiques, chacun dans son propre module, avec une interface commune de simulation et de tracé (via ProcessDisp).",
     en: "Eight classic processes, each in its own module, with a shared interface for simulation and plotting (via ProcessDisp)."
   },
+   "sbrownian.title": { fr: "Mouvement Brownien Standard", en: "Standard Brownian Motion" },
+   "sbrownian.path": { fr: "processes/brownian.py", en: "processes/brownian.py" },
   "sbrownian.desc": {
     fr: "Mouvement brownien standard (processus de Wiener) : la brique de base de tout le calcul stochastique dans la bibliothèque.",
     en: "Standard Brownian motion (Wiener process): the basic building block for all stochastic calculus in the library."
@@ -142,10 +144,6 @@ const i18n = {
   "perspectives.repo": { fr: "Dépôt GitHub →", en: "GitHub repository →" }
 };
 
-const ps = {
-   "sbrownian.title": { fr: "Mouvement Brownien Standard", en: "Standard Brownian Motion" },
-   "sbrownian.path": { fr: "processes/brownian.py", en: "processes/brownian.py" },
-}
 const LANG_KEY = "portfolio-lang";
 let currentLang = localStorage.getItem(LANG_KEY) || "fr";
 
