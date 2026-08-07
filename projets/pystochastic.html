@@ -47,7 +47,7 @@
       <h2 data-i18n="section.apercu.title">Aperçu</h2>
       <p data-i18n="apercu.p1">
         PyStochastic est une bibliothèque Python pensée comme une boîte à outils unifiée pour le
-        calcul stochastique : plutôt que de réimplémenter un générateur de mouvement brownien ou un
+        calcul stochastique et la modélisation stochastique: plutôt que de réimplémenter un générateur de mouvement brownien ou un
         schéma d'Euler-Maruyama à chaque projet, chaque brique (processus, EDS, statistiques,
         filtrage) est disponible sous une interface commune.
       </p>
@@ -75,10 +75,10 @@
       <div class="modules-grid">
         <article class="module-card">
           <svg class="module-chart" viewBox="0 0 220 64"><path d="M4,58 C40,58 55,6 78,6 C101,6 116,58 216,58" class="c-raspberry"></path></svg>
-          <h3 class="module-name">Crandom</h3>
+          <h3 class="module-name">CRandom</h3>
           <p class="module-path">pyrandom/crandom.py</p>
           <p class="module-desc" data-i18n="crandom.desc">
-            Génère des échantillons de lois continues, des plus courantes (uniforme, normale,
+            Génère des échantillons de lois à densité, des plus courantes (uniforme, normale,
             exponentielle) aux plus spécifiques (Weibull, échet, Fisher…).
           </p>
         </article>
@@ -92,7 +92,7 @@
             <line x1="158" y1="58" x2="158" y2="30" class="c-steel" stroke-width="8"></line>
             <line x1="194" y1="58" x2="194" y2="46" class="c-steel" stroke-width="8"></line>
           </svg>
-          <h3 class="module-name">Drandom</h3>
+          <h3 class="module-name">DRandom</h3>
           <p class="module-path">pyrandom/drandom.py</p>
           <p class="module-desc" data-i18n="drandom.desc">
             Génère des échantillons de lois discrètes, pour tout ce qui relève des processus à sauts
@@ -108,15 +108,15 @@
       <h2 data-i18n="section.processus.title">Processus stochastiques</h2>
       <p data-i18n="processus.intro">
         Huit processus classiques, chacun dans son propre module, avec une interface commune de
-        simulation et de tracé (via ProcessDisp).
+        simulation et de tracé.
       </p>
 
       <div class="modules-grid">
 
         <article class="module-card">
           <svg class="module-chart" viewBox="0 0 220 64"><path id="chart-sbrownian" class="c-raspberry"></path></svg>
-          <h3 class="module-name">SBrownian</h3>
-          <p class="module-path">processes/brownian.py</p>
+          <h3 class="module-name" data-ps="sbrownian.title">Mouvement Brownien Standard</h3>
+          <p class="module-path" data-ps="sbrownian.path" >processes/brownian.py</p>
           <p class="module-desc" data-i18n="sbrownian.desc">Mouvement brownien standard (processus de Wiener) : la brique de base de tout le calcul stochastique dans la bibliothèque.</p>
         </article>
 
