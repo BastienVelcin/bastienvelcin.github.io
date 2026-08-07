@@ -30,8 +30,8 @@ const i18n = {
   "section.apercu.eyebrow": { fr: "01 — Aperçu", en: "01 — Overview" },
   "section.apercu.title": { fr: "Aperçu", en: "Overview" },
   "apercu.p1": {
-    fr: "PyStochastic est une bibliothèque Python pensée comme une boîte à outils unifiée pour le calcul stochastique : plutôt que de réimplémenter un générateur de mouvement brownien ou un schéma d'Euler-Maruyama à chaque projet, chaque brique (processus, EDS, statistiques, filtrage) est disponible sous une interface commune.",
-    en: "PyStochastic is a Python library built as a unified toolkit for stochastic calculus: instead of reimplementing a Brownian motion generator or an Euler-Maruyama scheme for every project, each building block (processes, SDEs, statistics, filtering) is available behind a common interface."
+    fr: "PyStochastic est une bibliothèque Python pensée comme une boîte à outils unifiée pour le calcul stochastique et la modélisation stochastique : plutôt que de réimplémenter un générateur de mouvement brownien ou un schéma d'Euler-Maruyama à chaque projet, chaque brique (processus, EDS, statistiques, filtrage) est disponible sous une interface commune.",
+    en: "PyStochastic is a Python library built as a unified toolkit for stochastic calculus and stochastic modeling: instead of reimplementing a Brownian motion generator or an Euler-Maruyama scheme for every project, each building block (processes, SDEs, statistics, filtering) is available behind a common interface."
   },
   "apercu.p2": {
     fr: "Le projet est encore en développement actif (WIP) : les modules ci-dessous décrivent l'architecture visée et l'état actuel du dépôt.",
@@ -48,7 +48,7 @@ const i18n = {
     en: "Two foundational modules for generating random samples, used internally by the stochastic processes and directly reusable elsewhere."
   },
   "crandom.desc": {
-    fr: "Génère des échantillons de lois continues, des plus courantes (uniforme, normale, exponentielle) aux plus spécifiques (Weibull, Fréchet, Fisher…).",
+    fr: "Génère des échantillons de lois à densité, des plus courantes (uniforme, normale, exponentielle) aux plus spécifiques (Weibull, Fréchet, Fisher…).",
     en: "Generates samples from continuous distributions, from common ones (uniform, normal, exponential) to more specific ones (Weibull, Fréchet, Fisher…)."
   },
   "drandom.desc": {
@@ -142,6 +142,10 @@ const i18n = {
   "perspectives.repo": { fr: "Dépôt GitHub →", en: "GitHub repository →" }
 };
 
+const ps = {
+   "sbrownian.title": { fr: "Mouvement Brownien Standard", en: "Standard Brownian Motion" },
+   "sbrownian.path": { fr: "processes/brownian.py", en: "processes/brownian.py" },
+}
 const LANG_KEY = "portfolio-lang";
 let currentLang = localStorage.getItem(LANG_KEY) || "fr";
 
