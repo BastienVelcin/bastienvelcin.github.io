@@ -9,8 +9,8 @@ const projets = [
     tag: { fr: "Python · Modélisation", en: "Python · Modeling" },
     titre: { fr: "Bibliothèque PyStochastic", en: "PyStochastic Library" },
     description: {
-      fr: "Création d'une bibliothèque python destinée au calcul stochastique et à la modélisation stochastique. Le projet est en cours de développement.",
-      en: "Creation of a Python library for stochastic calculus and stochastic modeling. The project is currently under development."
+      fr: "Bibliothèque Python pour le calcul stochastique et la modélisation stochastique : génération d'échantillons aléatoires, processus classiques, équations différentielles stochastiques, statistiques et filtrage non linéaire.",
+      en: "A Python library for stochastic calculus and stochastic modelling: random sampling, classic processes, stochastic differential equations, statistics and nonlinear filtering."
     },
     lien_code: "https://github.com/BastienVelcin/PyStochastic",
     lien_demo: null,

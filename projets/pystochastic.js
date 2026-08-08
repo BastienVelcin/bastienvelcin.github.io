@@ -180,7 +180,7 @@ const processus = [
     },
     chart: "chart-cir",
 
-  },
+  },/*
   {
     title: {fr: "Modèle de Cox-Ross-Rubinstein", en: "Cox-Ross-Rubinstein Model"},
     path: "processes/crr.py",
@@ -190,7 +190,7 @@ const processus = [
     },
     chart: "chart-crr",
     chartType: "lattice"
-  },
+  },*/
 ];
 
 const LANG_KEY = "portfolio-lang";
