@@ -163,7 +163,7 @@ const processus = [
     chart:"chart-poisson",
   },
   {
-    title: {fr: "Modèle de Vasicek", en: "Masicek model"},
+    title: {fr: "Modèle de Vasicek", en: "Vasicek model"},
     path: "processes/Vasicek.py",
     desc: {
       fr: "Un Ornstein-Uhlenbeck appliqué aux taux d'intérêt, qui peut prendre des valeurs négatives.",
