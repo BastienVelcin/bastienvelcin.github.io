@@ -25,7 +25,7 @@ const i18n = {
     en: "A Python library for stochastic calculus and stochastic modelling: random sampling, classic processes, stochastic differential equations, statistics and nonlinear filtering."
   },
   "hero.link.code": { fr: "Code source (GitHub) →", en: "Source code (GitHub) →" },
-  "hero.pill.status": { fr: "En développement", en: "Work in progress" },
+  "hero.pill.status": { fr: "Version initiale : 0.1.0", en: "Initial release : 0.1.0" },
 
   "section.apercu.eyebrow": { fr: "01 — Aperçu", en: "01 — Overview" },
   "section.apercu.title": { fr: "Aperçu", en: "Overview" },
@@ -37,9 +37,9 @@ const i18n = {
     fr: "Le projet est encore en développement actif (WIP) : les modules ci-dessous décrivent l'architecture visée et l'état actuel du dépôt.",
     en: "The project is still under active development (WIP): the modules below describe the intended architecture and the current state of the repository."
   },
-  "stat.modules": { fr: "modules", en: "modules" },
-  "stat.processus": { fr: "processus implémentés", en: "processes implemented" },
-  "stat.statut": { fr: "statut du dépôt", en: "repository status" },
+  "stat.modules": { fr: "sous-bibliothèques", en: "sub-libraries" },
+  "stat.processus": { fr: "modules implémentés", en: "implemented" },
+  "stat.statut": { fr: "Version du dépot", en: "Repository version" },
 
   "section.modules.eyebrow": { fr: "02 — Échantillonnage", en: "02 — Sampling" },
   "section.modules.title": { fr: "Modules aléatoires", en: "Random modules" },
@@ -102,7 +102,9 @@ const i18n = {
   "perspectives.li2": { fr: "Publier une distribution stable sur PyPI.", en: "Publish a stable release on PyPI." },
   "perspectives.li3": { fr: "Documenter chaque module avec des exemples reproductibles.", en: "Document each module with reproducible examples." },
   "perspectives.resources": { fr: "Ressources", en: "Resources" },
-  "perspectives.repo": { fr: "Dépôt GitHub →", en: "GitHub repository →" }
+  "perspectives.repo": { fr: "Dépôt GitHub →", en: "GitHub repository →" },
+
+  "nextversion":{fr:"Prévu pour la version 0.2.0", en:"Planned for version 0.2.0"}
 };
 
 const random = [
