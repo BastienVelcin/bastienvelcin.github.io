@@ -25,7 +25,8 @@ const i18n = {
     en: "A Python library for stochastic calculus and stochastic modelling: random sampling, classic processes, stochastic differential equations, statistics and nonlinear filtering."
   },
   "hero.link.code": { fr: "Code source (GitHub) →", en: "Source code (GitHub) →" },
-  "hero.pill.status": { fr: "Version initiale : 0.1.0", en: "Initial release : 0.1.0" },
+  "hero.link.download" : {fr : "Voir sur PyPI →", en : "View on PyPI →"},
+  "hero.pill.status": { fr: "Version : 0.2.0", en: "Version : 0.2.0" },
 
   "section.apercu.eyebrow": { fr: "01 — Aperçu", en: "01 — Overview" },
   "section.apercu.title": { fr: "Aperçu", en: "Overview" },
@@ -54,33 +55,37 @@ const i18n = {
   "section.processus.title": { fr: "Processus stochastiques", en: "Stochastic processes" },
 
   "processus.intro": {
-    fr: "Sept processus classiques, chacun dans son propre module, avec une interface commune de simulation et de tracé.",
-    en: "Seven classic processes, each in its own module, with a shared interface for simulation and plotting."
+    fr: "Onze processus classiques, chacun dans son propre module, avec une interface commune de simulation et de tracé.",
+    en: "Eleven classic processes, each in its own module, with a shared interface for simulation and plotting."
   },
 
-  "section.mc.eyebrow": { fr: "04 — Simulation", en: "04 — Simulation" },
-  "section.mc.title": { fr: "Monte Carlo & Équations Différentielles Stochastiques", en: "Monte Carlo & Stochastic Differential Equations" },
-  "mc.p1": {
-    fr: "La simulation de Monte Carlo consiste à générer un grand nombre de trajectoires indépendantes d'un même processus pour estimer une quantité d'intérêt (prix, probabilité, espérance) par une moyenne empirique.",
-    en: "Monte Carlo simulation generates a large number of independent trajectories of the same process to estimate a quantity of interest (price, probability, expectation) via an empirical average."
-  },
-  "mc.chart.title": { fr: "Faisceau de trajectoires simulées", en: "Bundle of simulated trajectories" },
-  "mc.legend.paths": { fr: "trajectoires", en: "trajectories" },
-  "mc.legend.mean": { fr: "moyenne empirique", en: "empirical mean" },
-
+  "section.eds.eyebrow": { fr: "04 — Simulation", en: "04 — Simulation" },
+  "section.eds.title": { fr: "Équations Différentielles Stochastiques & solveurs", en: "Stochastic Differential Equations & solvers" },
   "eds.p1": {
-    fr: "Pour les processus définis par une équation différentielle stochastique sans solution explicite, PyStochastic propose deux schémas de discrétisation : Euler-Maruyama (ordre faible 1) et Milstein, qui ajoute un terme correctif pour une meilleure précision lorsque la diffusion dépend de l'état.",
-    en: "For processes defined by a stochastic differential equation with no closed-form solution, PyStochastic provides two discretization schemes: Euler-Maruyama (weak order 1) and Milstein, which adds a correction term for better accuracy when diffusion depends on the state."
+    fr: "Les équations différentielles stochastiques permettent de relier la différentielle d'un processus au sens d'Itō à lui-même, avec un terme aléatoire modélisé par un mouvement brownien standard.",
+    en: "Stochastic differential equations allows to link the differential of a stochastic process to itself, with a random term modeled by a standard Brownian motion."
   },
+  "eds.p2": {
+    fr: "Différentes méthodes numériques permettent de résoudre approximativement une équation différentielle stochastique : Euler-Maruyama, Milstein et Runge-Kutta.\n" +
+        "        Notons que ces deux dernières méthodes ne sont compatibles uniquement pour des équations différentielles stochastiques unidimensionnelles et autonômes, tandis que\n" +
+        "        la méthode d'Euler-Maruyama accepte tout type d'équations différentielles stochastiques.",
+    en: "Few numerical methods allow to solve approximately a stochastic differential equation: Euler-Maruyama, Milstein and Runge-Kutta.\n" +
+        "Note that these two methods are only compatible for unidimensional autonomous stochastic differential equations, while the Euler-Maruyama method accepts any type of stochastic differential equation."
+  },
+  "eds.chart.title": { fr: "Faisceau de trajectoires simulées", en: "Bundle of simulated trajectories" },
+  "eds.legend.paths": { fr: "trajectoires", en: "trajectories" },
+  "eds.legend.mean": { fr: "moyenne empirique", en: "empirical mean" },
+
   "eds.chart.title": { fr: "Schéma exact vs discrétisé", en: "Exact vs discretized scheme" },
   "eds.legend.exact": { fr: "trajectoire fine", en: "fine trajectory" },
   "eds.legend.approx": { fr: "approximation discrétisée", en: "discretized approximation" },
 
-  "section.stats.eyebrow": { fr: "05 — Analyse", en: "05 — Analysis" },
-  "section.stats.title": { fr: "Statistiques & séries temporelles", en: "Statistics & time series" },
+  "section.stats.eyebrow": { fr: "05 — Analyse statistique", en: "05 — Statistical analysis" },
+  "section.stats.title": { fr: "Monte Carlo & Statistiques", en: "Monte Carlo & Statistics" },
   "stats.p1": {
-    fr: "Au-delà de la simulation, la bibliothèque vise aussi des outils d'analyse : statistiques descriptives sur les trajectoires simulées, et manipulation de séries temporelles pour confronter modèle et données réelles.",
-    en: "Beyond simulation, the library also targets analysis tools: descriptive statistics on simulated trajectories, and time series handling to compare the model against real data."
+    fr: "        Au-delà de la simulation de trajectoires, PyStochastic propose des outils d'analyse sur les simulations et sur des échantillons : estimation,\n" +
+        "        intervalles de confiance, trajectoire moyenne, quantiles, histogramme et densité empirique ...",
+    en: "Beyond trajectory simulation, PyStochastic offers tools for analyzing simulations and samples: estimation, confidence intervals, mean trajectory, quantiles, histogram and empirical density ..."
   },
   "hist.title": { fr: "Distribution des valeurs terminales", en: "Distribution of terminal values" },
   "ts.title": { fr: "Série temporelle", en: "Time series" },
@@ -104,7 +109,7 @@ const i18n = {
   "perspectives.resources": { fr: "Ressources", en: "Resources" },
   "perspectives.repo": { fr: "Dépôt GitHub →", en: "GitHub repository →" },
 
-  "nextversion":{fr:"Prévu pour la version 0.2.0", en:"Planned for version 0.2.0"}
+  "nextversion":{fr:"Prévu pour la version 0.3.0", en:"Planned for version 0.3.0"}
 };
 
 const random = [
@@ -130,7 +135,7 @@ const random = [
 const processus = [
   {
     title: { fr: "Mouvement Brownien Standard", en: "Standard Brownian Motion" },
-    path: "processes/brownian.py",
+    path: "processes/elementary/brownian.py",
     desc: {
       fr: "La brique de base de tout le calcul stochastique dans la bibliothèque. Outil fondamental de représentation de l'aléatoire.",
       en: "Standard Brownian motion (Wiener process): the basic building block for all stochastic calculus in the library. Fundamental tool for representing randomness."
@@ -139,7 +144,7 @@ const processus = [
   },
   {
     title: {fr:"Mouvement Brownien Géométrique", en:"Geometric Brownian Motion"},
-    path: "processes/GeometricBrownianMotion.py",
+    path: "processes/diffusion/geometric_brownian_motion.py",
     desc: {
       fr: "Trajectoires toujours positives, à la base des modèles de type Black-Scholes.",
       en: "Always-positive trajectories, the basis of Black-Scholes-type models."
@@ -147,17 +152,44 @@ const processus = [
     chart: "chart-gbrownian",
   },
   {
+    title: {fr:"Mouvement Brownien Fractionaire", en:"Fractional Brownian Motion"},
+    path: "processes/diffusion/fractional_brownian.py",
+    desc: {
+      fr: "Extension du mouvement brownien à des processus gaussien aux incréments corrélés.",
+      en: "Extension of a Brownian Motion on Gaussian processes with correlated increments."
+    },
+    chart: "chart-fbm",
+  },
+  {
+    title: {fr:"Processus de Bessel", en:"Bessel process"},
+    path: "processes/elementary/bessel.py",
+    desc: {
+      fr: "Norme euclidienne d'un mouvement brownien standard d-dimensionel.",
+      en: "Euclidean norm of a d-dimensional standard Brownian Motion."
+    },
+    chart: "chart-bessel",
+  },
+  {
     title: {fr:"Processus d'Ornstein-Uhlenbeck", en:"Ornstein-Uhlenbeck processes"},
     path: "processes/OrnsteinUhlenbeck.py",
     desc: {
-      fr: "Retour à la moyenne, utile pour modéliser des quantités qui oscillent autour d'un niveau d'équilibre.",
-      en: "Mean-reverting, useful for modelling quantities that oscillate around an equilibrium level."
+      fr: "Retour à la moyenne, utile pour modéliser des quantités qui oscillent autour de zéro",
+      en: "Mean-reverting, useful for modelling quantities that oscillate around zero."
     },
     chart:"chart-ornuhl",
   },
   {
+    title: {fr: "Modèle de Vasicek", en: "Vasicek model"},
+    path: "processes/diffusion/vasicek.py",
+    desc: {
+      fr: "Un Ornstein-Uhlenbeck étendu, appliqué aux taux d'intérêt, qui peut prendre des valeurs négatives.",
+      en: "An extended Ornstein-Uhlenbeck process, applied to interest rates, which can take negative values."
+    },
+    chart: "chart-vasicek",
+  },
+  {
     title:{fr:"Processus de Poisson", en:"Poisson processes"},
-    path:"processes/Poisson.py",
+    path:"processes/jump/poisson.py",
     desc:{
       fr: "Compte des événements arrivant aléatoirement dans le temps, à taux constant.",
       en: "Counts events arriving randomly over time, at a constant rate."
@@ -165,23 +197,41 @@ const processus = [
     chart:"chart-poisson",
   },
   {
-    title: {fr: "Modèle de Vasicek", en: "Vasicek model"},
-    path: "processes/Vasicek.py",
-    desc: {
-      fr: "Un Ornstein-Uhlenbeck appliqué aux taux d'intérêt, qui peut prendre des valeurs négatives.",
-      en: "An Ornstein-Uhlenbeck process applied to interest rates, which can take negative values."
+    title:{fr:"Processus de Poisson Composé", en:"Compound Poisson processes"},
+    path:"processes/jump/compound_poisson.py",
+    desc:{
+      fr: "Modélise des sauts arrivant selon un processus de Poisson, où chaque saut a une taille aléatoire.",
+      en: "Model jumps arriving with respect to a Poisson process, where each jump length is random."
     },
-    chart: "chart-vasicek",
+    chart:"chart-compoundpoisson",
   },
   {
     title: {fr: "Modèle de Cox-Ingersoll-Ross", en: "Cox-Ingersoll-Ross Model"},
-    path: "processes/cir.py",
+    path: "processes/diffusion/cir.py",
     desc: {
       fr: "Variante du Vasicek dont la volatilité dépend du niveau, ce qui garantit des trajectoires positives.",
       en: "A Vasicek variant whose volatility depends on the level, which keeps trajectories positive."
     },
     chart: "chart-cir",
 
+  },
+  {
+    title: {fr: "Modèle de Hull-White", en: "Hull-White Model"},
+    path: "processes/diffusion/hull_white.py",
+    desc: {
+      fr: "Un modèle permettant la modélisation de taux d'intérêts, avec un plus grand contrôle que Vasicek.",
+      en: "A model allowing the modelling of interest rates, with an higher flexibility than Vasicek."
+    },
+    chart: "chart-hullwhite",
+  },
+  {
+    title: {fr: "Modèle de Heston", en: "Heston Model"},
+    path: "processes/diffusion/heston.py",
+    desc: {
+      fr: "Modélisation de la volatilité d'un actif, dépendant de l'évolution de l'actif sous-jacent.",
+      en: "Modelling of an asset volatility, with a dependancy from the underlying asset."
+    },
+    chart: "chart-heston",
   },/*
   {
     title: {fr: "Modèle de Cox-Ross-Rubinstein", en: "Cox-Ross-Rubinstein Model"},
@@ -263,6 +313,60 @@ function genGBM(n, seed, mu = 0.06, sigma = 0.25, S0 = 1, dt = 0.02) {
   for (let i = 1; i < n; i++) {
     logS += (mu - 0.5 * sigma * sigma) * dt + sigma * Math.sqrt(dt) * gaussian(rng);
     out.push(Math.exp(logS));
+  }
+  return out;
+}
+
+function genBessel(n, seed, dim = 3, sigma = 1, x0 = 1, dt = 0.05) {
+  const rng = mulberry32(seed);
+  let x = x0;
+  const out = [x];
+  for (let i = 1; i < n; i++) {
+    const drift = x > 1e-6 ? ((dim - 1) / (2 * x)) * dt : 0;
+    x += drift + sigma * Math.sqrt(dt) * gaussian(rng);
+    x = Math.abs(x); // réflexion en 0
+    out.push(x);
+  }
+  return out;
+}
+
+function genHullWhite(n, seed, a = 1.0, theta = () => 0.03, sigma = 0.01, r0 = 0.03, dt = 0.05) {
+  const rng = mulberry32(seed);
+  let r = r0;
+  const out = [r];
+  const thetaFn = typeof theta === "function" ? theta : () => theta;
+  for (let i = 1; i < n; i++) {
+    const t = i * dt;
+    r += (thetaFn(t) - a * r) * dt + sigma * Math.sqrt(dt) * gaussian(rng);
+    out.push(r);
+  }
+  return out;
+}
+
+function genHeston(n, seed, mu = 0.05, kappa = 1.5, thetaV = 0.04, xi = 0.3, rho = -0.5, s0 = 1, v0 = 0.04, dt = 0.02) {
+  const rng = mulberry32(seed);
+  let s = s0, v = v0;
+  const sOut = [s], vOut = [v];
+  for (let i = 1; i < n; i++) {
+    const z1 = gaussian(rng);
+    const z2 = rho * z1 + Math.sqrt(1 - rho * rho) * gaussian(rng);
+    const vPos = Math.max(v, 0);
+    s += mu * s * dt + Math.sqrt(vPos) * s * Math.sqrt(dt) * z1;
+    v += kappa * (thetaV - v) * dt + xi * Math.sqrt(vPos) * Math.sqrt(dt) * z2;
+    v = Math.max(v, 0);
+    sOut.push(s);
+    vOut.push(v);
+  }
+  return { s: sOut, v: vOut };
+}
+
+function genCompoundPoisson(n, seed, lambda = 0.25, jumpMean = 0, jumpStd = 1) {
+  const rng = mulberry32(seed);
+  let x = 0;
+  const out = [0];
+  for (let i = 1; i < n; i++) {
+    if (rng() < lambda) x += jumpMean + jumpStd * gaussian(rng);
+    out.push(x);
   }
   return out;
 }
@@ -353,10 +457,16 @@ function renderModuleCharts() {
 
   setPath("chart-sbrownian", scaleToPath(genBrownian(60, 11, 1), W, H).d);
   setPath("chart-gbrownian", scaleToPath(genGBM(60, 22), W, H).d);
+  setPath("chart-fbm", scaleToPath(genBrownian(30, 22), W, H).d);
+  setPath("chart-bessel", scaleToPath(genBessel(60, 5), W, H).d);
   setPath("chart-ornuhl", scaleToPath(genMeanReverting(70, 33, 1.4, 0, 0.5, 1.3, 0.04, false), W, H).d);
+  setPath("chart-compoundpoisson", stepPath(genCompoundPoisson(60, 12), W, H));
   setPath("chart-poisson", stepPath(genPoissonCounts(50, 44, 0.3), W, H));
   setPath("chart-vasicek", scaleToPath(genMeanReverting(70, 55, 0.9, 0.02, 0.03, -0.01, 0.05, false), W, H).d);
   setPath("chart-cir", scaleToPath(genMeanReverting(70, 66, 1.0, 0.035, 0.1, 0.02, 0.05, true), W, H).d);
+  setPath("chart-heston", scaleToPath(genHullWhite(80, 10), W, H).d);
+  setPath("chart-hullwhite", scaleToPath(genHullWhite(75, 110), W, H).d);
+
 
   // ProcessDisp : superposition de 3 trajectoires faibles + 1 nette
   ["chart-processdisp-1", "chart-processdisp-2", "chart-processdisp-3"].forEach((id, i) => {

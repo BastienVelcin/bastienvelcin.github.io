@@ -14,7 +14,7 @@ const projets = [
     },
     lien_code: "https://github.com/BastienVelcin/PyStochastic",
     lien_demo: null,
-    lien_page: "/projets/pystochastic.html"
+    lien_page: "./pystochastic/pystochastic.html"
   },
   {
     tag: { fr: "MATLAB · Modélisation", en: "MATLAB · Modeling" },

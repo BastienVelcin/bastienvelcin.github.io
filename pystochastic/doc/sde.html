@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pystochastic.sde — PyStochastic Doc</title>
+<meta name="description" content="Référence des schémas de résolution d'équations différentielles stochastiques de PyStochastic.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="doc.css">
+</head>
+<body>
+<div class="doc-shell">
+  <header class="doc-topbar">
+    <button class="doc-hamburger" id="doc-hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="doc-sidebar">☰</button>
+    <a class="doc-brand" href="index.html">PyStochastic <span>doc</span></a>
+    <div class="doc-topbar-search">
+      <input type="text" class="doc-search-input" placeholder="Rechercher…">
+    </div>
+    <nav class="doc-topbar-links">
+      <a href="../pystochastic.html" class="doc-hide-mobile" data-i18n="topbar.project">← Projet</a>
+      <span class="sep">·</span>
+      <a href="../../../../Desktop/test%20site/index.html#projets" data-i18n="topbar.portfolio">Portfolio</a>
+      <a href="https://github.com/BastienVelcin/PyStochastic" target="_blank" rel="noopener">GitHub</a>
+      <button class="lang-switch" id="lang-toggle" aria-label="Changer de langue / Switch language">
+        <span data-lang-btn="fr">FR</span><span class="lang-sep">·</span><span data-lang-btn="en">EN</span>
+      </button>
+    </nav>
+  </header>
+  <div class="doc-body">
+    <div class="doc-scrim" id="doc-scrim"></div>
+    <aside class="doc-sidebar" id="doc-sidebar">
+      <div class="doc-sidebar-search">
+        <input type="text" class="doc-search-input" placeholder="Rechercher…">
+      </div>
+      <div class="doc-nav-group">
+        <a class="doc-nav-page-link" href="index.html" data-i18n="nav.group.guide">Guide</a>
+        <ul>
+          <li><a href="index.html#install" class="doc-item-link" data-nav data-i18n="nav.guide.install">Installation</a></li>
+          <li><a href="index.html#quickstart" class="doc-item-link" data-nav data-i18n="nav.guide.quickstart">Démarrage rapide</a></li>
+        </ul>
+      </div>
+      <div class="doc-nav-group">
+        <a class="doc-nav-page-link" href="random.html" data-i18n="nav.group.random">pystochastic.random</a>
+        <ul>
+          <li><a href="random.html#crandom" class="doc-item-link" data-nav>Crandom</a></li>
+          <li><a href="random.html#drandom" class="doc-item-link" data-nav>Drandom</a></li>
+        </ul>
+      </div>
+      <div class="doc-nav-group">
+        <a class="doc-nav-page-link" href="processes.html" data-i18n="nav.group.processes">pystochastic.processes</a>
+        <ul>
+          <li><a href="processes.html#sbrownian" class="doc-item-link" data-nav>SBrownian</a></li>
+          <li><a href="processes.html#gbrownian" class="doc-item-link" data-nav>GBrownian</a></li>
+          <li><a href="processes.html#ornuhl" class="doc-item-link" data-nav>OrnUhl</a></li>
+          <li><a href="processes.html#poisson" class="doc-item-link" data-nav>Poisson</a></li>
+          <li><a href="processes.html#vasicek" class="doc-item-link" data-nav>Vasicek</a></li>
+          <li><a href="processes.html#cir" class="doc-item-link" data-nav>CIR</a></li>
+          <li><a href="processes.html#crr" class="doc-item-link" data-nav>CRR</a></li>
+          <li><a href="processes.html#processdisp" class="doc-item-link" data-nav>ProcessDisp</a></li>
+        </ul>
+      </div>
+      <div class="doc-nav-group is-current-page">
+        <a class="doc-nav-page-link" href="sde.html" data-i18n="nav.group.sde">pystochastic.sde</a>
+        <ul>
+          <li><a href="sde.html#eulermaruyama" class="doc-item-link" data-nav>EulerMaruyama</a></li>
+          <li><a href="sde.html#milstein" class="doc-item-link" data-nav>Milstein</a></li>
+        </ul>
+      </div>
+    </aside>
+    <main class="doc-main">
+      <div class="doc-hero">
+        <p class="eyebrow" data-i18n="hero.random.eyebrow">Documentation</p>
+        <h1>pystochastic.sde</h1>
+        <p data-i18n="hero.sde.tagline">Schémas de discrétisation pour les équations différentielles stochastiques sans solution explicite.</p>
+      </div>
+
+      <section id="eulermaruyama" class="doc-entry">
+        <span class="doc-badge">pystochastic.sde</span>
+        <h2>EulerMaruyama</h2>
+        <p class="desc" data-i18n="eulermaruyama.desc">Schéma d'Euler-Maruyama : discrétisation d'ordre faible 1, la méthode de référence pour simuler une EDS.</p>
+        <pre class="doc-sig"><span class="kw">class</span> pystochastic.sde.<span class="fn">EulerMaruyama</span>(<span class="arg">process</span>, <span class="arg">dt</span>, <span class="arg">n_steps</span>)</pre>
+        <p class="doc-subhead">Paramètres</p>
+        <ul class="doc-params">
+          <li><span class="pname">process</span><span class="ptype">object</span><p class="pdesc" data-i18n="sde.p.process">instance de processus définissant la dérive et la diffusion.</p></li>
+          <li><span class="pname">dt</span><span class="ptype">float</span><p class="pdesc" data-i18n="sde.p.dt">pas de temps de la discrétisation.</p></li>
+          <li><span class="pname">n_steps</span><span class="ptype">int</span><p class="pdesc" data-i18n="sde.p.nsteps">nombre de pas de temps.</p></li>
+        </ul>
+        <p class="doc-subhead">EulerMaruyama.simulate</p>
+        <pre class="doc-sig">.<span class="fn">simulate</span>(<span class="arg">n_paths</span>=1, <span class="arg">seed</span>=None)</pre>
+        <p class="doc-returns"><span class="ptype">ndarray</span><span data-i18n="m.r.simulate">tableau de forme (n_paths, n_steps).</span></p>
+        <p class="doc-subhead">Exemple</p>
+        <pre class="code-block"><code>process = OrnUhl(theta=<span class="st">1.2</span>, mu=<span class="st">0</span>, sigma=<span class="st">0.5</span>)
+scheme  = EulerMaruyama(process, dt=<span class="st">0.01</span>, n_steps=<span class="st">1000</span>)
+trajectoires = scheme.simulate(n_paths=<span class="st">200</span>)</code></pre>
+      </section>
+
+      <section id="milstein" class="doc-entry">
+        <span class="doc-badge">pystochastic.sde</span>
+        <h2>Milstein</h2>
+        <p class="desc" data-i18n="milstein.desc">Schéma de Milstein : ajoute un terme correctif à Euler-Maruyama, plus précis lorsque la diffusion dépend de l'état.</p>
+        <pre class="doc-sig"><span class="kw">class</span> pystochastic.sde.<span class="fn">Milstein</span>(<span class="arg">process</span>, <span class="arg">dt</span>, <span class="arg">n_steps</span>)</pre>
+        <p class="doc-subhead">Paramètres</p>
+        <ul class="doc-params">
+          <li><span class="pname">process</span><span class="ptype">object</span><p class="pdesc" data-i18n="sde.p.process">instance de processus définissant la dérive et la diffusion.</p></li>
+          <li><span class="pname">dt</span><span class="ptype">float</span><p class="pdesc" data-i18n="sde.p.dt">pas de temps de la discrétisation.</p></li>
+          <li><span class="pname">n_steps</span><span class="ptype">int</span><p class="pdesc" data-i18n="sde.p.nsteps">nombre de pas de temps.</p></li>
+        </ul>
+        <p class="doc-subhead">Milstein.simulate</p>
+        <pre class="doc-sig">.<span class="fn">simulate</span>(<span class="arg">n_paths</span>=1, <span class="arg">seed</span>=None)</pre>
+        <p class="doc-returns"><span class="ptype">ndarray</span><span data-i18n="m.r.simulate">tableau de forme (n_paths, n_steps).</span></p>
+      </section>
+    </main>
+  </div>
+</div>
+<script src="doc.js"></script>
+</body>
+</html>

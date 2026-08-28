@@ -1,0 +1,294 @@
+/* =====================================================================
+   doc.css — mini-site de documentation façon NumPy
+   Réutilise les tokens de couleur/typo de ../../style.css (chargez-le
+   avant celui-ci) mais définit sa propre mise en page : barre du haut
+   + menu à GAUCHE (contrairement au reste du site), pensée pour un
+   arbre de navigation long, identique sur toutes les pages.
+===================================================================== */
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition-duration: 0.001ms !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--raspberry); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------------------------------------------------------------
+   Coquille générale : barre du haut + corps (sidebar + contenu)
+---------------------------------------------------------------- */
+.doc-shell { display: flex; flex-direction: column; min-height: 100vh; }
+
+.doc-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0.75rem 1.4rem;
+  background: var(--paper);
+  border-bottom: 1px solid var(--paper-line);
+}
+
+.doc-hamburger {
+  display: none;
+  background: none;
+  border: 1px solid var(--paper-line);
+  border-radius: var(--radius);
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  font-size: 1rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.doc-brand {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--ink);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.doc-brand span { color: var(--raspberry); }
+
+.doc-topbar-search { flex: 1 1 auto; max-width: 360px; }
+.doc-topbar-search input {
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink);
+  background: rgba(255,255,255,0.6);
+  border: 1px solid var(--paper-line);
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+}
+.doc-topbar-search input:focus { outline: none; border-color: var(--raspberry); }
+.doc-topbar-search input::placeholder { color: var(--ink-faint); }
+
+.doc-topbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.doc-topbar-links a { color: var(--ink-soft); }
+.doc-topbar-links a:hover { color: var(--raspberry); text-decoration: none; }
+
+/* Pastille FR/EN : même look que le reste du site (voir style.css),
+   juste replacée dans la topbar plutôt que dans une sidebar droite.
+   Son CSS d'origine la positionne en absolu (pensé pour une sidebar) :
+   on remet un positionnement normal pour qu'elle s'intègre au flux
+   de la topbar. */
+.doc-topbar .lang-switch {
+  position: relative;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  width: 84px;
+  flex-shrink: 0;
+}
+
+/* ---------------------------------------------------------------
+   Corps : sidebar gauche (sticky, défilement propre) + contenu
+---------------------------------------------------------------- */
+.doc-body {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.doc-scrim {
+  display: none;
+  position: fixed;
+  inset: 0;
+  top: 57px;
+  background: rgba(28, 35, 51, 0.28);
+  z-index: 70;
+}
+.doc-scrim.open { display: block; }
+
+.doc-sidebar {
+  width: 270px;
+  flex-shrink: 0;
+  border-right: 1px solid var(--paper-line);
+  padding: 2rem 1.5rem 2rem 1.8rem;
+  position: sticky;
+  top: 57px;
+  align-self: flex-start;
+  height: calc(100vh - 57px);
+  overflow-y: auto;
+}
+
+.doc-main {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 2.6rem clamp(1.4rem, 4vw, 3.6rem) 6rem;
+  max-width: 880px;
+}
+
+/* ---- Recherche dans la sidebar (repliée depuis la topbar sur mobile) ---- */
+.doc-sidebar-search { display: none; }
+
+/* ---- Groupes de navigation ---- */
+.doc-nav-group { margin-bottom: 1.8rem; }
+
+.doc-nav-page-link {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin: 0 0 0.7rem;
+}
+.doc-nav-group.is-current-page .doc-nav-page-link {
+  color: var(--raspberry);
+  font-weight: 600;
+}
+.doc-nav-page-link:hover { text-decoration: none; color: var(--raspberry); }
+
+.doc-nav-group ul { list-style: none; margin: 0; padding: 0; }
+.doc-nav-group li { margin-bottom: 0.5rem; }
+.doc-nav-group li.doc-hidden { display: none; }
+.doc-nav-group a.doc-item-link {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  padding: 0.15rem 0 0.15rem 0.9rem;
+  border-left: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.doc-nav-group a.doc-item-link:hover { color: var(--ink); text-decoration: none; }
+.doc-nav-group a.doc-item-link.active {
+  color: var(--raspberry);
+  border-left-color: var(--raspberry);
+}
+
+/* ---------------------------------------------------------------
+   Contenu : bandeaux de module + fiches
+---------------------------------------------------------------- */
+.doc-hero { padding-bottom: 2.2rem; border-bottom: 1px solid var(--paper-line); margin-bottom: 0.4rem; }
+.doc-hero .eyebrow {
+  font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--steel); margin: 0 0 0.7rem;
+}
+.doc-hero h1 {
+  font-family: var(--font-display); font-weight: 600; color: var(--ink);
+  font-size: clamp(1.9rem, 3.6vw, 2.6rem); margin: 0 0 0.7rem;
+}
+.doc-hero p { color: var(--ink-soft); max-width: 62ch; margin: 0; }
+
+.doc-module-banner { padding: 2.4rem 0 0.4rem; }
+.doc-module-banner .doc-module-name {
+  font-family: var(--font-display); font-size: 1.4rem; color: var(--ink); margin: 0.2rem 0 0.4rem;
+}
+.doc-module-banner p { color: var(--ink-soft); max-width: 60ch; margin: 0; }
+
+.doc-entry { padding: 2.3rem 0; scroll-margin-top: 1.4rem; border-top: 1px solid var(--paper-line); }
+.doc-entry:first-of-type { border-top: none; }
+.doc-entry h2 { font-family: var(--font-display); color: var(--ink); font-size: 1.3rem; margin: 0 0 0.5rem; }
+
+.doc-badge {
+  display: inline-block; font-family: var(--font-mono); font-size: 0.62rem;
+  text-transform: uppercase; letter-spacing: 0.07em; color: var(--steel);
+  border: 1px solid var(--steel); background: var(--steel-soft);
+  padding: 0.15rem 0.55rem; border-radius: 999px; margin-bottom: 0.6rem;
+}
+
+.doc-sig {
+  font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.5;
+  background: var(--ink); color: #E8E6DE; padding: 0.9rem 1.1rem;
+  border-radius: var(--radius); overflow-x: auto; margin: 0.7rem 0 1.2rem;
+}
+.doc-sig .fn { color: #E38FBE; }
+.doc-sig .kw { color: #8FD0E3; }
+.doc-sig .arg { color: #9FD8B0; }
+
+.doc-entry .desc { color: var(--ink-soft); max-width: 64ch; margin: 0 0 1.1rem; }
+
+.doc-subhead {
+  font-family: var(--font-mono); font-size: 0.67rem; text-transform: uppercase;
+  letter-spacing: 0.07em; color: var(--ink-faint); margin: 1.3rem 0 0.5rem;
+}
+
+.doc-params { list-style: none; margin: 0; padding: 0; }
+.doc-params li { padding: 0.6rem 0; border-top: 1px solid var(--paper-line); }
+.doc-params li:first-child { border-top: none; }
+.doc-params .pname { font-family: var(--font-mono); font-size: 0.83rem; color: var(--ink); }
+.doc-params .ptype { font-family: var(--font-mono); font-size: 0.71rem; color: var(--steel); margin-left: 0.5rem; }
+.doc-params .pdesc { color: var(--ink-soft); font-size: 0.83rem; margin: 0.3rem 0 0; }
+
+.doc-returns { color: var(--ink-soft); font-size: 0.83rem; }
+.doc-returns .ptype { font-family: var(--font-mono); font-size: 0.71rem; color: var(--steel); margin-right: 0.5rem; }
+
+/* Blocs de code / pills — repris du reste du site pour cohérence visuelle */
+.code-block {
+  margin: 0.4rem 0 0; background: var(--ink); color: #E8E6DE;
+  padding: 1.1rem 1.3rem; border-radius: var(--radius); overflow-x: auto;
+  font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.6;
+}
+.code-block .cm { color: #8A93A3; }
+.code-block .kw { color: #E38FBE; }
+.code-block .st { color: #9FD8B0; }
+.code-block .at { color: #9BC680; }
+
+/* ---------------------------------------------------------------
+   Mobile (<900px) : sidebar en tiroir, ouverte via le hamburger
+---------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .doc-hamburger { display: inline-flex; }
+  .doc-topbar-search { display: none; }
+  .doc-sidebar-search { display: block; margin-bottom: 1.6rem; }
+  .doc-sidebar-search input {
+    width: 100%; font-family: var(--font-mono); font-size: 0.8rem; color: var(--ink);
+    background: rgba(255,255,255,0.6); border: 1px solid var(--paper-line);
+    border-radius: 999px; padding: 0.5rem 0.9rem;
+  }
+  .doc-sidebar-search input:focus { outline: none; border-color: var(--raspberry); }
+
+  .doc-topbar-links span.sep { display: none; }
+  .doc-topbar-links a.doc-hide-mobile { display: none; }
+
+  .doc-sidebar {
+    position: fixed;
+    top: 57px;
+    left: 0;
+    bottom: 0;
+    width: 84vw;
+    max-width: 320px;
+    height: auto;
+    background: var(--paper);
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    z-index: 75;
+    box-shadow: 4px 0 18px rgba(28, 35, 51, 0.14);
+  }
+  .doc-sidebar.open { transform: translateX(0); }
+
+  .doc-main { padding: 2rem 5vw 5rem; max-width: 100%; }
+}

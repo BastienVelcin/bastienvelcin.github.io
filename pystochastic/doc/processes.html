@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pystochastic.processes — PyStochastic Doc</title>
+<meta name="description" content="Référence des processus stochastiques de PyStochastic.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="doc.css">
+</head>
+<body>
+<div class="doc-shell">
+  <header class="doc-topbar">
+    <button class="doc-hamburger" id="doc-hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="doc-sidebar">☰</button>
+    <a class="doc-brand" href="index.html">PyStochastic <span>doc</span></a>
+    <div class="doc-topbar-search">
+      <input type="text" class="doc-search-input" placeholder="Rechercher…">
+    </div>
+    <nav class="doc-topbar-links">
+      <a href="../pystochastic.html" class="doc-hide-mobile" data-i18n="topbar.project">← Projet</a>
+      <span class="sep">·</span>
+      <a href="../../index.html" data-i18n="topbar.portfolio">Portfolio</a>
+      <a href="https://github.com/BastienVelcin/PyStochastic" target="_blank" rel="noopener">GitHub</a>
+      <button class="lang-switch" id="lang-toggle" aria-label="Changer de langue / Switch language">
+        <span data-lang-btn="fr">FR</span><span class="lang-sep">·</span><span data-lang-btn="en">EN</span>
+      </button>
+    </nav>
+  </header>
+  <div class="doc-body">
+    <div class="doc-scrim" id="doc-scrim"></div>
+    <aside class="doc-sidebar" id="doc-sidebar">
+      <div class="doc-sidebar-search">
+        <input type="text" class="doc-search-input" placeholder="Rechercher…">
+      </div>
+      <div class="doc-nav-group">
+        <a class="doc-nav-page-link" href="index.html" data-i18n="nav.group.guide">Guide</a>
+        <ul>
+          <li><a href="index.html#install" class="doc-item-link" data-nav data-i18n="nav.guide.install">Installation</a></li>
+          <li><a href="index.html#quickstart" class="doc-item-link" data-nav data-i18n="nav.guide.quickstart">Démarrage rapide</a></li>
+        </ul>
+      </div>
+      <div class="doc-nav-group">
+        <a class="doc-nav-page-link" href="random.html" data-i18n="nav.group.random">pystochastic.random</a>
+        <ul>
+          <li><a href="random.html#crandom" class="doc-item-link" data-nav>Crandom</a></li>
+          <li><a href="random.html#drandom" class="doc-item-link" data-nav>Drandom</a></li>
+        </ul>
+      </div>
+      <div class="doc-nav-group is-current-page">
+        <a class="doc-nav-page-link" href="processes.html" data-i18n="nav.group.processes">pystochastic.processes</a>
+        <ul>
+          <li><a href="processes.html#sbrownian" class="doc-item-link" data-nav>SBrownian</a></li>
+          <li><a href="processes.html#gbrownian" class="doc-item-link" data-nav>GBrownian</a></li>
+          <li><a href="processes.html#ornuhl" class="doc-item-link" data-nav>OrnUhl</a></li>
+          <li><a href="processes.html#poisson" class="doc-item-link" data-nav>Poisson</a></li>
+          <li><a href="processes.html#vasicek" class="doc-item-link" data-nav>Vasicek</a></li>
+          <li><a href="processes.html#cir" class="doc-item-link" data-nav>CIR</a></li>
+          <li><a href="processes.html#crr" class="doc-item-link" data-nav>CRR</a></li>
+          <li><a href="processes.html#processdisp" class="doc-item-link" data-nav>ProcessDisp</a></li>
+        </ul>
+      </div>
+      <div class="doc-nav-group">
+        <a class="doc-nav-page-link" href="sde.html" data-i18n="nav.group.sde">pystochastic.sde</a>
+        <ul>
+          <li><a href="sde.html#eulermaruyama" class="doc-item-link" data-nav>EulerMaruyama</a></li>
+          <li><a href="sde.html#milstein" class="doc-item-link" data-nav>Milstein</a></li>
+        </ul>
+      </div>
+    </aside>
+    <main class="doc-main">
+      <div class="doc-hero">
+        <p class="eyebrow" data-i18n="hero.random.eyebrow">Documentation</p>
+        <h1>pystochastic.processes</h1>
+        <p data-i18n="hero.processes.tagline">Huit processus stochastiques classiques, chacun avec une interface commune de simulation.</p>
+      </div>
+      <section id="sbrownian" class="doc-entry">
+        <span class="doc-badge">pystochastic.processes</span>
+        <h2>SBrownian</h2>
+        <p class="desc" data-i18n="sbrownian.desc">Mouvement brownien standard (processus de Wiener).</p>
+        <pre class="doc-sig"><span class="kw">class</span> pystochastic.processes.<span class="fn">SBrownian</span>(<span class="arg">sigma</span>=1.0, <span class="arg">x0</span>=0.0)</pre>
+        <p class="doc-subhead">Paramètres</p>
+        <ul class="doc-params">
+          <li><span class="pname">sigma</span><span class="ptype">float</span><p class="pdesc" data-i18n="p.sigma">volatilité du processus.</p></li>
+          <li><span class="pname">x0</span><span class="ptype">float</span><p class="pdesc" data-i18n="p.x0">valeur initiale.</p></li>
+        </ul>
+        <p class="doc-subhead">SBrownian.simulate</p>
+        <pre class="doc-sig">.<span class="fn">simulate</span>(<span class="arg">t</span>, <span class="arg">n_steps</span>, <span class="arg">n_paths</span>=1, <span class="arg">seed</span>=None)</pre>
+        <p class="doc-returns"><span class="ptype">ndarray</span><span data-i18n="m.r.simulate">tableau de forme (n_paths, n_steps).</span></p>
+        <p class="doc-subhead">Exemple</p>
+        <pre class="code-block"><code>process = SBrownian(sigma=<span class="st">1.0</span>)
+trajectoires = process.simulate(t=<span class="st">1.0</span>, n_steps=<span class="st">500</span>, n_paths=<span class="st">10</span>)</code></pre>
+      </section>
+      <section id="gbrownian" class="doc-entry">
+        <span class="doc-badge">pystochastic.processes</span>
+        <h2>GBrownian</h2>
+        <p class="desc" data-i18n="gbrownian.desc">Mouvement brownien géométrique, à trajectoires toujours positives.</p>
+        <pre class="doc-sig"><span class="kw">class</span> pystochastic.processes.<span class="fn">GBrownian</span>(<span class="arg">mu</span>=0.05, <span class="arg">sigma</span>=0.2, <span class="arg">s0</span>=1.0)</pre>
+        <p class="doc-subhead">Paramètres</p>
+        <ul class="doc-params">
+          <li><span class="pname">mu</span><span class="ptype">float</span><p class="pdesc" data-i18n="p.mu">dérive (taux de croissance moyen).</p></li>
+          <li><span class="pname">sigma</span><span class="ptype">float</span><p class="pdesc" data-i18n="p.sigma">volatilité du processus.</p></li>
+          <li><span class="pname">s0</span><span class="ptype">float</span><p class="pdesc" data-i18n="p.s0">valeur initiale (prix).</p></li>
+        </ul>
+        <p class="doc-subhead">GBrownian.simulate</p>
+        <pre class="doc-sig">.<span class="fn">simulate</span>(<span class="arg">t</span>, <span class="arg">n_steps</span>, <span class="arg">n_paths</span>=1, <span class="arg">seed</span>=None)</pre>
+        <p class="doc-returns"><span class="ptype">ndarray</span><span data-i18n="m.r.simulate">tableau de forme (n_paths, n_steps).</span></p>
+      </section>
+      <section id="ornuhl" class="doc-entry">
+        <span class="doc-badge">pystochastic.processes</span>
+        <h2>OrnUhl</h2>
+        <p class="desc" data-i18n="ornuhl.desc">Processus d'Ornstein-Uhlenbeck, à retour à la moyenne.</p>
+        <pre class="doc-sig"><span class="kw">class</span> pystochastic.processes.<span class="fn">OrnUhl</span>(<span class="arg">theta</span>=1.0, <span class="arg">mu</span>=0.0, <span class="arg">sigma</span>=0.5, <span class="arg">x0</span>=0.0)</pre>
+        <p class="doc-subhead">Paramètres</p>
+        <ul class="doc-params">
+          <li><span class="pname">theta</span><span class="ptype">float</span><p class="pdesc" data-i18n="p.theta">vitesse de retour à la moyenne.</p></li>
+          <li><span class="pname">mu</span><span class="ptype">float</span><p class="pdesc" data-i18n="p.meanlevel">niveau moyen de long terme.</p></li>
+          <li><span class="pname">sigma</span><span class="ptype">float</span><p class="pdesc" data-i18n="p.sigma">volatilité du processus.</p></li>
+          <li><span class="pname">x0</span><span class="ptype">float</span><p class="pdesc" data-i18n="p.x0">valeur initiale.</p></li>
+        </ul>
+        <p class="doc-subhead">OrnUhl.simulate</p>
+        <pre class="doc-sig">.<span class="fn">simulate</span>(<span class="arg">t</span>, <span class="arg">n_steps</span>, <span class="arg">n_paths</span>=1, <span class="arg">seed</span>=None)</pre>
+        <p class="doc-returns"><span class="ptype">ndarray</span><span data-i18n="m.r.simulate">tableau de forme (n_paths, n_steps).</span></p>
+      </section>
+      <section id="poisson" class="doc-entry">
+        <span class="doc-badge">pystochastic.processes</span>
+        <h2>Poisson</h2>
+        <p class="desc" data-i18n="poisson.desc">Processus de comptage à sauts, arrivant à taux constant.</p>
+        <pre class="doc-sig"><span class="kw">class</span> pystochastic.processes.<span class="fn">Poisson</span>(<span class="arg">lam</span>=1.0)</pre>
+        <p class="doc-subhead">Paramètres</p>
+        <ul class="doc-params">
+          <li><span class="pname">lam</span><span class="ptype">float</span><p class="pdesc" data-i18n="p.lam">taux d'arrivée des sauts (intensité).</p></li>
+        </ul>
+        <p class="doc-subhead">Poisson.simulate</p>
+        <pre class="doc-sig">.<span class="fn">simulate</span>(<span class="arg">t</span>, <span class="arg">n_steps</span>, <span class="arg">n_paths</span>=1, <span class="arg">seed</span>=None)</pre>
+        <p class="doc-returns"><span class="ptype">ndarray</span><span data-i18n="m.r.simulate">tableau de forme (n_paths, n_steps).</span></p>
+      </section>
+      <section id="vasicek" class="doc-entry">
+        <span class="doc-badge">pystochastic.processes</span>
+        <h2>Vasicek</h2>
+        <p class="desc" data-i18n="vasicek.desc">Modèle de taux d'intérêt de Vasicek (Ornstein-Uhlenbeck appliqué aux taux).</p>
+        <pre class="doc-sig"><span class="kw">class</span> pystochastic.processes.<span class="fn">Vasicek</span>(<span class="arg">a</span>=1.0, <span class="arg">b</span>=0.03, <span class="arg">sigma</span>=0.02, <span class="arg">r0</span>=0.03)</pre>
+        <p class="doc-subhead">Paramètres</p>
+        <ul class="doc-params">
+          <li><span class="pname">a</span><span class="ptype">float</span><p class="pdesc" data-i18n="p.a">vitesse de retour à la moyenne.</p></li>
+          <li><span class="pname">b</span><span class="ptype">float</span><p class="pdesc" data-i18n="p.b">niveau moyen de long terme du taux.</p></li>
+          <li><span class="pname">sigma</span><span class="ptype">float</span><p class="pdesc" data-i18n="p.sigma">volatilité du processus.</p></li>
+          <li><span class="pname">r0</span><span class="ptype">float</span><p class="pdesc" data-i18n="p.r0">taux initial.</p></li>
+        </ul>
+        <p class="doc-subhead">Vasicek.simulate</p>
+        <pre class="doc-sig">.<span class="fn">simulate</span>(<span class="arg">t</span>, <span class="arg">n_steps</span>, <span class="arg">n_paths</span>=1, <span class="arg">seed</span>=None)</pre>
+        <p class="doc-returns"><span class="ptype">ndarray</span><span data-i18n="m.r.simulate">tableau de forme (n_paths, n_steps).</span></p>
+      </section>
+      <section id="cir" class="doc-entry">
+        <span class="doc-badge">pystochastic.processes</span>
+        <h2>CIR</h2>
+        <p class="desc" data-i18n="cir.desc">Modèle Cox-Ingersoll-Ross : variante du Vasicek à volatilité dépendante du niveau, trajectoires positives.</p>
+        <pre class="doc-sig"><span class="kw">class</span> pystochastic.processes.<span class="fn">CIR</span>(<span class="arg">a</span>=1.0, <span class="arg">b</span>=0.04, <span class="arg">sigma</span>=0.15, <span class="arg">r0</span>=0.03)</pre>
+        <p class="doc-subhead">Paramètres</p>
+        <ul class="doc-params">
+          <li><span class="pname">a</span><span class="ptype">float</span><p class="pdesc" data-i18n="p.a">vitesse de retour à la moyenne.</p></li>
+          <li><span class="pname">b</span><span class="ptype">float</span><p class="pdesc" data-i18n="p.b">niveau moyen de long terme du taux.</p></li>
+          <li><span class="pname">sigma</span><span class="ptype">float</span><p class="pdesc" data-i18n="p.sigma">volatilité du processus.</p></li>
+          <li><span class="pname">r0</span><span class="ptype">float</span><p class="pdesc" data-i18n="p.r0">taux initial.</p></li>
+        </ul>
+        <p class="doc-subhead">CIR.simulate</p>
+        <pre class="doc-sig">.<span class="fn">simulate</span>(<span class="arg">t</span>, <span class="arg">n_steps</span>, <span class="arg">n_paths</span>=1, <span class="arg">seed</span>=None)</pre>
+        <p class="doc-returns"><span class="ptype">ndarray</span><span data-i18n="m.r.simulate">tableau de forme (n_paths, n_steps).</span></p>
+      </section>
+      <section id="crr" class="doc-entry">
+        <span class="doc-badge">pystochastic.processes</span>
+        <h2>CRR</h2>
+        <p class="desc" data-i18n="crr.desc">Modèle Cox-Ross-Rubinstein : arbre binomial recombinant.</p>
+        <pre class="doc-sig"><span class="kw">class</span> pystochastic.processes.<span class="fn">CRR</span>(<span class="arg">s0</span>=100, <span class="arg">u</span>=1.1, <span class="arg">d</span>=0.9, <span class="arg">n_steps</span>=10)</pre>
+        <p class="doc-subhead">Paramètres</p>
+        <ul class="doc-params">
+          <li><span class="pname">s0</span><span class="ptype">float</span><p class="pdesc" data-i18n="p.crr.s0">prix initial du sous-jacent.</p></li>
+          <li><span class="pname">u</span><span class="ptype">float</span><p class="pdesc" data-i18n="p.crr.u">facteur de hausse à chaque pas.</p></li>
+          <li><span class="pname">d</span><span class="ptype">float</span><p class="pdesc" data-i18n="p.crr.d">facteur de baisse à chaque pas.</p></li>
+          <li><span class="pname">n_steps</span><span class="ptype">int</span><p class="pdesc" data-i18n="p.crr.n">nombre de pas de l'arbre.</p></li>
+        </ul>
+        <p class="doc-subhead">CRR.tree</p>
+        <pre class="doc-sig">.<span class="fn">tree</span>()</pre>
+        <p class="desc" data-i18n="crr.m.tree.desc">Construit l'arbre binomial recombinant complet.</p>
+        <p class="doc-returns"><span class="ptype">ndarray</span><span data-i18n="crr.r.tree">tableau des valeurs du sous-jacent à chaque nœud.</span></p>
+        <p class="doc-subhead">CRR.price_option</p>
+        <pre class="doc-sig">.<span class="fn">price_option</span>(<span class="arg">strike</span>, <span class="arg">option_type</span>=<span class="st">"call"</span>, <span class="arg">r</span>=0.0)</pre>
+        <p class="desc" data-i18n="crr.m.price.desc">Évalue une option européenne par rétro-induction sur l'arbre.</p>
+        <ul class="doc-params">
+          <li><span class="pname">strike</span><span class="ptype">float</span><p class="pdesc" data-i18n="crr.p.strike">prix d'exercice de l'option.</p></li>
+          <li><span class="pname">option_type</span><span class="ptype">str</span><p class="pdesc" data-i18n="crr.p.type">"call" ou "put".</p></li>
+          <li><span class="pname">r</span><span class="ptype">float</span><p class="pdesc" data-i18n="crr.p.r">taux sans risque.</p></li>
+        </ul>
+        <p class="doc-returns"><span class="ptype">float</span><span data-i18n="crr.r.price">prix de l'option.</span></p>
+        <p class="doc-subhead">Exemple</p>
+        <pre class="code-block"><code>arbre = CRR(s0=<span class="st">100</span>, u=<span class="st">1.1</span>, d=<span class="st">0.9</span>, n_steps=<span class="st">20</span>)
+prix = arbre.price_option(strike=<span class="st">100</span>, option_type=<span class="st">"call"</span>, r=<span class="st">0.02</span>)</code></pre>
+      </section>
+
+      <section id="processdisp" class="doc-entry">
+        <span class="doc-badge">pystochastic.processes</span>
+        <h2>ProcessDisp</h2>
+        <p class="desc" data-i18n="processdisp.desc">Trace plusieurs trajectoires simulées d'un même processus.</p>
+        <pre class="doc-sig"><span class="kw">class</span> pystochastic.processes.<span class="fn">ProcessDisp</span>(<span class="arg">process</span>)</pre>
+        <p class="doc-subhead">Paramètres</p>
+        <ul class="doc-params">
+          <li><span class="pname">process</span><span class="ptype">object</span><p class="pdesc" data-i18n="p.disp.process">instance de processus à visualiser.</p></li>
+        </ul>
+        <p class="doc-subhead">ProcessDisp.plot</p>
+        <pre class="doc-sig">.<span class="fn">plot</span>(<span class="arg">paths</span>, <span class="arg">t</span>)</pre>
+        <p class="desc" data-i18n="disp.m.plot.desc">Trace les trajectoires simulées, avec la moyenne empirique en surbrillance.</p>
+        <ul class="doc-params">
+          <li><span class="pname">paths</span><span class="ptype">ndarray</span><p class="pdesc" data-i18n="disp.p.paths">trajectoires simulées à afficher.</p></li>
+          <li><span class="pname">t</span><span class="ptype">float</span><p class="pdesc" data-i18n="disp.p.t">grille de temps associée.</p></li>
+        </ul>
+        <p class="doc-returns"><span class="ptype">Figure</span><span data-i18n="disp.r.plot">figure Matplotlib.</span></p>
+      </section>
+    </main>
+  </div>
+</div>
+<script src="doc.js"></script>
+</body>
+</html>

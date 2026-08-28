@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guide — PyStochastic Doc</title>
+<meta name="description" content="Guide d'installation et de démarrage rapide pour PyStochastic.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="doc.css">
+</head>
+<body>
+<div class="doc-shell">
+  <header class="doc-topbar">
+    <button class="doc-hamburger" id="doc-hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="doc-sidebar">☰</button>
+    <a class="doc-brand" href="index.html">PyStochastic <span>doc</span></a>
+    <div class="doc-topbar-search">
+      <input type="text" class="doc-search-input" placeholder="Rechercher…">
+    </div>
+    <nav class="doc-topbar-links">
+      <a href="../pystochastic.html" class="doc-hide-mobile" data-i18n="topbar.project">← Projet</a>
+      <span class="sep">·</span>
+      <a href="../../index.html" data-i18n="topbar.portfolio">Portfolio</a>
+      <a href="https://github.com/BastienVelcin/PyStochastic" target="_blank" rel="noopener">GitHub</a>
+      <button class="lang-switch" id="lang-toggle" aria-label="Changer de langue / Switch language">
+        <span data-lang-btn="fr">FR</span><span class="lang-sep">·</span><span data-lang-btn="en">EN</span>
+      </button>
+    </nav>
+  </header>
+  <div class="doc-body">
+    <div class="doc-scrim" id="doc-scrim"></div>
+    <aside class="doc-sidebar" id="doc-sidebar">
+      <div class="doc-sidebar-search">
+        <input type="text" class="doc-search-input" placeholder="Rechercher…">
+      </div>
+      <div class="doc-nav-group is-current-page">
+        <a class="doc-nav-page-link" href="index.html" data-i18n="nav.group.guide">Guide</a>
+        <ul>
+          <li><a href="index.html#install" class="doc-item-link" data-nav data-i18n="nav.guide.install">Installation</a></li>
+          <li><a href="index.html#quickstart" class="doc-item-link" data-nav data-i18n="nav.guide.quickstart">Démarrage rapide</a></li>
+        </ul>
+      </div>
+      <div class="doc-nav-group">
+        <a class="doc-nav-page-link" href="random.html" data-i18n="nav.group.random">pystochastic.random</a>
+        <ul>
+          <li><a href="random.html#crandom" class="doc-item-link" data-nav>CRandom</a></li>
+          <li><a href="random.html#drandom" class="doc-item-link" data-nav>DRandom</a></li>
+        </ul>
+      </div>
+      <div class="doc-nav-group">
+        <a class="doc-nav-page-link" href="processes.html" data-i18n="nav.group.processes">pystochastic.processes</a>
+        <ul>
+          <li><a href="processes.html#sbrownian" class="doc-item-link" data-nav>Brownian</a></li>
+          <li><a href="processes.html#gbrownian" class="doc-item-link" data-nav>GeometricBrownianMotion</a></li>
+          <li><a href="processes.html#ornuhl" class="doc-item-link" data-nav>OrnsteinUhlenbeck</a></li>
+          <li><a href="processes.html#poisson" class="doc-item-link" data-nav>Poisson</a></li>
+          <li><a href="processes.html#vasicek" class="doc-item-link" data-nav>Vasicek</a></li>
+          <li><a href="processes.html#cir" class="doc-item-link" data-nav>CIR</a></li>
+        </ul>
+      </div>
+      <div class="doc-nav-group">
+        <a class="doc-nav-page-link" href="sde.html" data-i18n="nav.group.sde">pystochastic.sde</a>
+        <ul>
+          <li><a href="sde.html#eulermaruyama" class="doc-item-link" data-nav>EulerMaruyama</a></li>
+          <li><a href="sde.html#milstein" class="doc-item-link" data-nav>Milstein</a></li>
+        </ul>
+      </div>
+    </aside>
+    <main class="doc-main">
+      <div class="doc-hero">
+        <p class="eyebrow" data-i18n="hero.guide.eyebrow">Documentation</p>
+        <h1 data-i18n="hero.guide.title">Guide</h1>
+        <p data-i18n="hero.guide.tagline">Installation et démarrage rapide de PyStochastic : une introduction rapide et simple</p>
+      </div>
+
+      <section id="install" class="doc-entry">
+        <span class="doc-badge" data-i18n="install.badge">Guide</span>
+        <h2 data-i18n="install.title">Installation</h2>
+        <p class="desc" data-i18n="install.p1">La version actuelle de PyStochastic n'est pas encore publié sur PyPI. En attendant, installez-le directement depuis GitHub :</p>
+        <pre class="code-block"><code><span class="kw">git</span> clone https://github.com/BastienVelcin/PyStochastic.git
+<span class="kw">cd</span> PyStochastic
+<span class="kw">pip</span> install -e .</code></pre>
+        <p class="desc" data-i18n="install.p2" style="margin-top:1rem">Une distribution stable sur PyPI fait partie des prochaines étapes du projet.</p>
+      </section>
+
+      <section id="quickstart" class="doc-entry">
+        <span class="doc-badge" data-i18n="quickstart.badge">Guide</span>
+        <h2 data-i18n="quickstart.title">Démarrage rapide</h2>
+        <p class="desc" data-i18n="quickstart.p1">Exemple introductif : simulation d'un mouvement brownien et affichage de quelques de ses trajectoires.</p>
+        <pre class="code-block"><code><span class="kw">from</span> pystochastic.processes.brownian <span class="kw">import</span> Brownian
+
+W = Brownian(var=<span class="st">1</span>, t_0=<span class="st">0</span>, t_1=<span class="st">1</span>, n_steps=<span class="st">1000</span>)
+W.simulate(n_simulations=<span class="st">20</span>)
+dW = W.<span class="at">increments</span>
+
+W.plot()
+</section>
+    </main>
+  </div>
+</div>
+<script src="doc.js"></script>
+</body>
+</html>
